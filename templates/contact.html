@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+{% block container %}
+    <!-- scroll content -->
+    <div class="about">
+        <div class="about-bg-img">
+            <img src="imgs/about_2.gif">
+        </div>
+        <article class="about-content">
+            <h1 style="text-align: center">联系我们</h1>
+            <h1 align="center" style="background: rgb(255, 255, 255); margin: 0px 0px 9px; text-align: center; text-indent: 0pt;"><span style="font-family: comic sans ms;"><strong><span style="background: rgb(255, 255, 255); margin: 0px; color: rgb(23, 23, 23); text-transform: none; letter-spacing: 0pt; font-size: 34.5pt; font-style: normal; font-weight: bold;">Why Do You Need Us?</span></strong></span></h1>
+
+        </article>
+    </div>
+{% endblock %}

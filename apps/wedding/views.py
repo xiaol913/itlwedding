@@ -1,18 +1,38 @@
+from rest_framework import viewsets
+from rest_framework.pagination import PageNumberPagination
 
-from rest_framework.views import APIView
-from rest_framework.response import Response
-
-from .models import WeddingArea
-from .serializer import WeddingAreaSerializer
-
+from .models import WeddingInfo, WeddingArea
+from .serializer import WeddingInfoSerializer
 # Create your views here.
 
 
-class AreaListView(APIView):
+class ListInfoPagination(PageNumberPagination):
     """
-    List all snippets, or create a new snippet.
+    分页配置
     """
-    def get(self, request, format=None):
-        area = WeddingArea.objects.all()
-        area_serializer = WeddingAreaSerializer(area, many=True)
-        return Response(area_serializer.data)
+    page_size = 5
+    page_query_param = 'page'
+    page_size_query_param = 'per_page'
+
+
+class WeddingListViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    list:
+        海外婚礼列表页、分页
+    retrieve:
+        海外婚礼详情
+    """
+    queryset = WeddingInfo.objects.all()
+    serializer_class = WeddingInfoSerializer
+    pagination_class = ListInfoPagination
+
+
+# class WeddingAreaViewSet(viewsets.ReadOnlyModelViewSet):
+#     """
+#     list:
+#         海外婚礼区域列表
+#     retrieve:
+#         海外婚礼区域信息
+#     """
+#     queryset = WeddingArea.objects.all()
+#     serializer_class = WeddingAreaSerializer

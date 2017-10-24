@@ -1,6 +1,6 @@
 import xadmin
 from xadmin import views
-from .models import EnjoyLabel
+from .models import EnjoyLabel, EnjoyInfo
 
 
 class BaseSetting(object):
@@ -18,6 +18,14 @@ class EnjoyLabelAdmin(object):
     pass
 
 
+class EnjoyInfoAdmin(object):
+    style_fields = {
+        "enjoy_info": "ueditor"
+    }
+
+
 xadmin.site.register(EnjoyLabel, EnjoyLabelAdmin)
+xadmin.site.register(EnjoyInfo, EnjoyInfoAdmin)
+
 xadmin.site.register(views.BaseAdminView, BaseSetting)
 xadmin.site.register(views.CommAdminView, GlobalSetting)

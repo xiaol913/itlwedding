@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-__author__ = 'bobby'
-
 import xadmin
 from xadmin.views import BaseAdminPlugin, CreateAdminView, ModelFormAdminView, UpdateAdminView
 from DjangoUeditor.models import UEditorField
@@ -14,6 +12,7 @@ class XadminUEditorWidget(UEditorWidget):
         self.ueditor_options=kwargs
         self.Media.js = None
         super(XadminUEditorWidget,self).__init__(kwargs)
+
 
 class UeditorPlugin(BaseAdminPlugin):
 
