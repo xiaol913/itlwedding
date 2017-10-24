@@ -24,7 +24,7 @@ from itlwedding.settings import MEDIA_ROOT
 from wedding.views import WeddingListViewSet
 from photo.views import PhotoListViewSet
 from enjoy.views import EnjoyListViewSet
-from video.views import VideoListViewSet, VideoListView
+from video.views import VideoListViewSet
 
 import xadmin
 
@@ -52,14 +52,19 @@ urlpatterns = [
     # 富文本
     url(r'^ueditor/', include('DjangoUeditor.urls')),
 
+    # 媒体页面
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 
+    # 主页
     url(r'^$', TemplateView.as_view(template_name="index.html"), name="index"),
 
+    # 关于我们
     url(r'^about/', TemplateView.as_view(template_name="about.html"), name="about"),
 
+    # 联系我们
     url(r'^contact/', TemplateView.as_view(template_name="contact.html"), name="contact"),
 
+    # 须知页面
     url(r'^know/', TemplateView.as_view(template_name="know.html"), name="know"),
 
     # 视频url配置

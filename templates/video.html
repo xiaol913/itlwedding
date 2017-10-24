@@ -1,11 +1,9 @@
 {% extends 'base.html' %}
 {% block container %}
+    {{ count }}
     {% for video in videos %}
-        {{ video.label }}
         {{ video.title }}
-        {{ video.front_img }}
         {{ video.video_info }}
         {{ video.video_url }}
-        {{ video.add_time }}
     {% endfor %}
 {% endblock %}

@@ -1,7 +1,9 @@
+import json
+
 from django.shortcuts import render
 from django.views.generic import View
-from django.http import HttpResponse
 
+import requests
 from rest_framework import viewsets
 
 from .models import VideoInfo
@@ -27,10 +29,13 @@ class VideoListView(View):
     视频列表页
     """
     def get(self, request):
-        all_videos = VideoInfo.objects.all()
+        all_videos = json.loads(requests.get(url='http://127.0.0.1:8000/api/video/').text)
+        count = all_videos['count']
+        videos = all_videos['results']
 
-        return render(request, "video.html",{
-            "videos": all_videos,
+        return render(request, "video.html", {
+            "videos": videos,
+            "count": count,
         })
 
 
@@ -39,8 +44,8 @@ class VideoInfoView(View):
     视频列表页
     """
     def get(self, request, video_id):
-        video = VideoInfo.objects.get(id=int(video_id))
+        video = json.loads(requests.get(url='http://127.0.0.1:8000/api/video/' + str(video_id)).text)
 
-        return render(request, "video_detail.html",{
+        return render(request, "video_detail.html", {
             "video": video,
         })
