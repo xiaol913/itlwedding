@@ -1,53 +1,6 @@
-//动画函数
-//X旋转
-#transform-rotateX(@deg){
-  -webkit-transform+_: rotateX(@deg);
-  -moz-transform+_: rotateX(@deg);
-  -ms-transform+_: rotateX(@deg);
-  -o-transform+_: rotateX(@deg);
-  transform+_: rotateX(@deg);
-}
-//Y旋转
-#transform-rotateY(@deg){
-  -webkit-transform+_: rotateY(@deg);
-  -moz-transform+_: rotateY(@deg);
-  -ms-transform+_: rotateY(@deg);
-  -o-transform+_: rotateY(@deg);
-  transform+_: rotateY(@deg);
-}
-//X+Y旋转
-#transform-rotate(@deg){
-  -webkit-transform+_: rotate(@deg);
-  -moz-transform+_: rotate(@deg);
-  -ms-transform+_: rotate(@deg);
-  -o-transform+_: rotate(@deg);
-  transform+_: rotate(@deg);
-}
-//X轴偏移
-#transform-translateX(@X){
-  -webkit-transform+_: translateX(@X);
-  -moz-transform+_: translateX(@X);
-  -ms-transform+_: translateX(@X);
-  -o-transform+_: translateX(@X);
-  transform+_: translateX(@X);
-}
-//Y轴偏移
-#transform-translateY(@Y){
-  -webkit-transform+_: translateY(@Y);
-  -moz-transform+_: translateY(@Y);
-  -ms-transform+_: translateY(@Y);
-  -o-transform+_: translateY(@Y);
-  transform+_: translateY(@Y);
-}
-//X和Y轴偏移
-#transform-translateX-Y(@X,@Y){
-  -webkit-transform+_: translate(@X, @Y);
-  -moz-transform+_: translate(@X, @Y);
-  -ms-transform+_: translate(@X, @Y);
-  -o-transform+_: translate(@X, @Y);
-  transform+_: translate(@X, @Y);
-}
-/* banner区文字动画 */
+@import "global";
+
+//banner区文字动画
 @keyframes banner_1 {
   0%{
     opacity: 0;
@@ -128,52 +81,9 @@
     #transform-translateX(10px);
   }
 }
-/* 场地1 进场动画 */
-@keyframes come-in {
-  0%{
-    opacity: 0;
-    -webkit-transform: translateX(300%);
-    -moz-transform: translateX(300%);
-    -ms-transform: translateX(300%);
-    -o-transform: translateX(300%);
-    transform: translateX(300%);
-  }
-  70%{
-    opacity: 1;
-    -webkit-transform: translateX(0%);
-    -moz-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    -o-transform: translateX(0%);
-    transform: translateX(0%);
-  }
-  80%{
-    opacity: 1;
-    -webkit-transform: translateX(-10px);
-    -moz-transform: translateX(-10px);
-    -ms-transform: translateX(-10px);
-    -o-transform: translateX(-10px);
-    transform: translateX(-10px);
-  }
-  95%{
-    opacity: 1;
-    -webkit-transform: translateX(10px);
-    -moz-transform: translateX(10px);
-    -ms-transform: translateX(10px);
-    -o-transform: translateX(10px);
-    transform: translateX(10px);
-  }
-  100%{
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-    -moz-transform: translateX(0px);
-    -ms-transform: translateX(0px);
-    -o-transform: translateX(0px);
-    transform: translateX(0px);
-  }
 
-}
-/* 场地2 进场动画 */
-@keyframes img-come {
+//wedding头部文字区域进场动画
+@keyframes wedding_header {
   0%{
     opacity: 0;
   }
@@ -181,13 +91,65 @@
     opacity: 1;
   }
 }
-
-/* 视频进场动画 */
-@keyframes video-come {
+//wedding图片进场动画
+@keyframes wedding_img {
   0%{
-    #transform-rotateX(90deg);
+    opacity: 0;
   }
   100%{
-    #transform-rotateX(0deg);
+    opacity: .6;
+  }
+}
+
+//图片加载时动画
+@keyframes load_left_right {
+  0%{
+    opacity: 0;
+    #transform-translateX(-100%);
+  }
+  100%{
+    opacity: 1;
+    #transform-translateX(0%);
+  }
+}
+@keyframes load_right_left {
+  0%{
+    opacity: 0;
+    #transform-translateX(100%);
+  }
+  100%{
+    opacity: 1;
+    #transform-translateX(0%);
+  }
+}
+@keyframes load_up_down {
+  0%{
+    opacity: 0;
+    #transform-translateY(-100%);
+  }
+  100%{
+    opacity: 1;
+    #transform-translateY(0%);
+  }
+}
+@keyframes load_down_up {
+  0%{
+    opacity: 0;
+    #transform-translateY(100%);
+  }
+  100%{
+    opacity: 1;
+    #transform-translateY(0%);
+  }
+}
+//文字加载时动画
+@keyframes load_word_small_big {
+  0%{
+    opacity:0;
+    #transform-scaleX-Y(0,0);
+  }
+  100%{
+    opacity:1;
+    #transform-scaleX-Y(1,1);
   }
 }

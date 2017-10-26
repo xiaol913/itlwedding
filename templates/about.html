@@ -1,12 +1,83 @@
-{% extends 'base.html' %}
-{% load staticfiles %}
-{% block css %}
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
-{% endblock %}
-{% block container %}
-    <div class="about">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中国海外婚礼策划公司 │ 高端婚礼定制 │ 婚庆布置设计 │ 国外婚礼服务 │ 婚纱摄影 │海外婚礼第一品牌 │成都海外婚礼 │全美式海外婚礼统筹│西式婚礼│户外婚礼│森系婚礼│教堂婚礼（欧洲婚礼、日本婚礼、法国婚礼、关岛婚礼、夏威夷婚礼、巴厘岛婚礼、普吉岛婚礼  环球旅拍）明星婚礼 吴奇隆 刘诗诗 林心如 霍建华www.itlwedding.com中国海外婚礼策划公司 │ 高端婚礼定制 │ 婚庆布置设计 │ 国外婚礼服务 │ 婚纱摄影 │海外婚礼第一品牌 │成都海外婚礼 │全美式海外婚礼统筹│西式婚礼│户外婚礼│森系婚礼│教堂婚礼（欧洲婚礼、日本婚礼、法国婚礼、关岛婚礼、夏威夷婚礼、巴厘岛婚礼、普吉岛婚礼  环球旅拍）明星婚礼 吴奇隆 刘诗诗 林心如 霍建华www.itlwedding.com</title>
+    <meta name="keywords" content="中国海外婚礼策划公司 │ 高端婚礼定制 │ 婚庆布置设计 │ 国外婚礼服务 │ 婚纱摄影 │海外婚礼第一品牌 │成都海外婚礼 │全美式海外婚礼统筹│西式婚礼│户外婚礼│森系婚礼│教堂婚礼（欧洲婚礼、日本婚礼、法国婚礼、关岛婚礼、夏威夷婚礼、巴厘岛婚礼、普吉岛婚礼  环球旅拍）明星婚礼 吴奇隆 刘诗诗 林心如 霍建华www.itlwedding.com">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/less.min.js"></script>
+    <script src="js/overlay.js"></script>
+</head>
+<body>
+<div id="wrapper">
+
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="index.html"></a>
+            </li>
+            <li>
+                <a href="/">首页</a>
+            </li>
+            <li>
+                <a href="wedding.html">海外婚礼</a>
+            </li>
+            <li>
+                <a href="photo.html">环球旅拍</a>
+            </li>
+            <li>
+                <a href="enjoy.html">客片欣赏</a>
+            </li>
+            <li>
+                <a href="video.html">婚礼视频</a>
+            </li>
+            <li>
+                <a href="know.html">婚礼须知</a>
+            </li>
+            <li>
+                <a href="contact.html">联系我们</a>
+            </li>
+            <li>
+                <a href="about.html">关于我们</a>
+            </li>
+            <li>
+                <p>微博地址：<a href="http://weibo.com/u/6063328464">爱塔罗海外婚礼</a></p>
+                <p>地址：成都市 高新区 益州大道北段英祥财富领域 2栋1610</p>
+                <p>TEL： 028-84610616</p>
+                <p>Mail： <a href="mailto:info@itlwedding.com">info@itlwedding.com</a></p>
+            </li>
+            <li>
+                <a href="tencent://message/?uin=1287068088&amp;Site=&amp;menu=yes"></a>
+                <a href="http://weibo.com/u/6063328464"><i class="linkedin"></i></a>
+                <a href="tel:13551229986"><i class="google"></i></a>
+                <img src="imgs/pc_2.jpg">
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="btn-bar">
+        <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container">
+            <!-- scroll content -->
+            <div class="about">
                 <div class="about-bg-img">
-                    <img src="{% static 'imgs/banner_3.jpg' %}">
+                    <img src="imgs/about_2.gif">
                 </div>
                 <article class="about-content">
                     <h1 style="text-align: center">关于我们</h1>
@@ -51,4 +122,8 @@
                     <p style="text-align: center; line-height: 2em;">我们最终卖的是「回忆」、是「感动」和筹备婚礼过程的「安心感」</p><p style="text-align: center; line-height: 2em;">爱塔罗始终扮演的是努力协助的角色</p><p style="text-align: center; line-height: 2em;">提供多元的选择来满足不同新人的期待</p><p style="text-align: center; line-height: 2em;">让新人可以真正地享受自己的婚礼</p><p style="text-align: center; line-height: 2em;">接受亲友的祝福。</p><p style="text-align: center; line-height: 2em;">你可以把所有事情都抛在脑后</p><p style="text-align: center; line-height: 2em;">只要专注于你的另一半</p><p style="text-align: center; line-height: 2em;">慢慢走向教堂长廊的另一端</p><p style="text-align: center; line-height: 2em;">沉浸在亲友暖暖的祝福气息</p><p style="text-align: center; line-height: 2em;">静静听著牧师对你们俩的祈福</p><p style="text-align: center; line-height: 2em;">直到戒指套在你们彼此的指上...这一切不就是整个婚礼的精华吗</p><p style="text-align: center; line-height: 2em;">虽然过程不长</p><p style="text-align: center; line-height: 2em;">但是由于你们的专注</p><p style="text-align: center; line-height: 2em;">这过程是无比的感动</p><p style="text-align: center; line-height: 2em;">婚礼时间不长</p><p style="text-align: center; line-height: 2em;">却是可以回味一辈子的美好回忆<br/></p><p style="text-align: center; line-height: 2em; text-indent: 0em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;"></span><br/></p><p style="text-align: center; line-height: 2em; text-indent: 0em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;"><br/></span></p><p style="text-align: center;"><img width="753" height="425" title="爱塔罗婚礼1.gif" style="width: 753px; height: 425px;" alt="爱塔罗婚礼1.gif" src="http://www.itlwedding.com/upload/image/20170618/14977602177865599.gif"/></p><p style="text-align: center; line-height: 2em; text-indent: 0em;"><br/></p><p style="text-align: center; line-height: 2em; text-indent: 0em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 24px;">The Story Begins…</span></p><p style="text-align: center; line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 18px;"></span><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;"><br/>爱塔罗是中国首家全美式海外婚礼统筹机构，源自台湾，始于2008年</span></p><p style="text-align: center; line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">爱塔罗有海外举办高端定制婚礼的执行经验</span></p><p style="text-align: center; line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">不仅拥有经验丰富的海外执行团队与当地资源（花艺、蛋糕、酒店等等）</span></p><p style="text-align: center; line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">我们能提供全方位的专业婚礼定制化旅行服务，让准新人享受异国浪漫婚礼一点都不难</span></p><p style="text-align: center; line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;"><br/></span></p><p style="text-align: center; line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">新人们在规划海外婚礼时最好先决定好婚礼日期、参加的人数、婚礼地点和样式（要靠山、靠海、或是私人别墅）</span></p><p style="text-align: center; line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">然后找专业婚礼公司就可以轻松搞定</span></p><p style="text-align: center; line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;"><br/></span></p><p style="text-align: center; line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">由于爱塔罗拥有独家落地执行会场优势，并且提供当国专业婚礼咨询，是爱塔罗带给新人最大的附加价值</span></p><p style="text-align: center; line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 16px;">但是需要注意的是：由于巴厘岛一直以来都是海外婚礼的热门地点，会场一定要提前半年以上做预订哦</span></p><p style="text-align: center;"><br/></p>
                 </article>
             </div>
-{% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

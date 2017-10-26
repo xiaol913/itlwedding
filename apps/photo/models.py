@@ -29,7 +29,6 @@ class PhotoInfo(models.Model):
     """
     环球旅拍详情页
     """
-    label = models.ForeignKey(PhotoLabel, verbose_name="环球旅拍", help_text="环球旅拍")
     name = models.CharField(default="", max_length=50, verbose_name="地点名称", help_text="地点名称")
     desc = models.CharField(default="", max_length=200, verbose_name="地点简述", help_text="地点简述")
     front_img = models.ImageField(upload_to="images/photo/front/", max_length=200, verbose_name="封面图", help_text="封面图")
@@ -44,3 +43,20 @@ class PhotoInfo(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class PhotoInfoImage(models.Model):
+    """
+    环球旅拍详情页照片
+    """
+    name = models.ForeignKey(PhotoInfo, verbose_name="详情", help_text="详情", related_name="images")
+    img = models.ImageField(upload_to="images/photo/img/")
+
+    add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间", help_text="添加时间")
+
+    class Meta:
+        verbose_name = "环球旅拍详情页照片"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return "环球旅拍详情页照片"

@@ -1,6 +1,6 @@
 import xadmin
 from xadmin import views
-from .models import EnjoyLabel, EnjoyInfo
+from .models import EnjoyLabel, EnjoyInfo, EnjoyInfoImage
 
 
 class BaseSetting(object):
@@ -23,9 +23,20 @@ class EnjoyInfoAdmin(object):
         "enjoy_info": "ueditor"
     }
 
+    class EnjoyInfoImageInline(object):
+        model = EnjoyInfoImage
+        exclude = ["add_time"]
+        extra = 3
+
+    inlines = [EnjoyInfoImageInline]
+
+
+class EnjoyInfoImageAdmin(object):
+    pass
 
 xadmin.site.register(EnjoyLabel, EnjoyLabelAdmin)
 xadmin.site.register(EnjoyInfo, EnjoyInfoAdmin)
+# xadmin.site.register(EnjoyInfoImage, EnjoyInfoImageAdmin)
 
 xadmin.site.register(views.BaseAdminView, BaseSetting)
 xadmin.site.register(views.CommAdminView, GlobalSetting)

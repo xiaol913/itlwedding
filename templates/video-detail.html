@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block container %}
+    <!-- nav bar -->
+    <nav class="st-nav-bar" id="st-nav-bar">
+
+        <ul class="nav nav-pills nav-justified">
+            <li role="presentation" class="st-bar" id="back"><a href="{% url 'video' %}">返回</a></li>
+        </ul>
+    </nav>
+    <!-- scroll content -->
+    <!-- 头部 -->
+    <div class="video-header">{{ video.title }}</div>
+    <div class="video-info">{{ video.video_info }}</div>
+    <!-- 内容 -->
+    <div class="video-frame">
+        <iframe src="{{ video.video_url }}"></iframe>
+    </div>
+    <div class="video-desc">
+    {% autoescape off %}
+        {{ video.video_desc }}
+    {% endautoescape %}
+    </div>
+{% endblock %}

@@ -21,23 +21,33 @@ from rest_framework.documentation import include_docs_urls
 from rest_framework.routers import DefaultRouter
 
 from itlwedding.settings import MEDIA_ROOT
-from wedding.views import WeddingListViewSet
-from photo.views import PhotoListViewSet
-from enjoy.views import EnjoyListViewSet
-from video.views import VideoListViewSet
+from wedding.views import WeddingListViewSet, WeddingLabelViewSet, WeddingAreaViewSet
+from photo.views import PhotoListViewSet, PhotoLabelViewSet
+from enjoy.views import EnjoyListViewSet, EnjoyLabelViewSet
+from video.views import VideoListViewSet, VideoLabelViewSet
 
 import xadmin
 
 router = DefaultRouter()
 
-# 配置海外婚礼url
-router.register(r'wedding', WeddingListViewSet, base_name="海外婚礼")
-# 配置环球旅拍url
-router.register(r'photo', PhotoListViewSet, base_name="环球旅拍")
-# 配置客片欣赏url
-router.register(r'enjoy', EnjoyListViewSet, base_name="客片欣赏")
 # 配置婚礼视频url
 router.register(r'video', VideoListViewSet, base_name="婚礼视频")
+# 配置婚礼视频Label url
+router.register(r'video_label', VideoLabelViewSet, base_name="婚礼视频标签")
+# 配置客片欣赏url
+router.register(r'enjoy', EnjoyListViewSet, base_name="客片欣赏")
+# 配置客片欣赏Label url
+router.register(r'enjoy_label', EnjoyLabelViewSet, base_name="客片欣赏标签")
+# 配置环球旅拍url
+router.register(r'photo', PhotoListViewSet, base_name="环球旅拍")
+# 配置环球旅拍Label url
+router.register(r'photo_label', PhotoLabelViewSet, base_name="环球旅拍标签")
+# 配置海外婚礼url
+router.register(r'wedding', WeddingListViewSet, base_name="海外婚礼")
+# 配置海外婚礼url
+router.register(r'wedding_area', WeddingAreaViewSet, base_name="海外婚礼区域")
+# 配置环球旅拍Label url
+router.register(r'wedding_label', WeddingLabelViewSet, base_name="海外婚礼标签")
 
 urlpatterns = [
     # Xadmin管理页面
@@ -67,6 +77,15 @@ urlpatterns = [
     # 须知页面
     url(r'^know/', TemplateView.as_view(template_name="know.html"), name="know"),
 
-    # 视频url配置
+    # 婚礼视频url配置
     url(r'^video/', include('video.urls'), name="video"),
+
+    # 客片欣赏url配置
+    url(r'^enjoy/', include('enjoy.urls'), name="enjoy"),
+
+    # 环球旅拍url配置
+    url(r'^photo/', include('photo.urls'), name="photo"),
+
+    # 海外婚礼url配置
+    url(r'^wedding/', include('wedding.urls'), name="wedding"),
 ]

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+{% endblock %}
+{% block js %}
+    <script src="{% static 'js/scroll.js' %}"></script>
+    <script src="{% static 'js/lightbox.js' %}"></script>
+{% endblock %}
+{% block container %}
+    <!-- nav bar -->
+    <nav class="st-nav-bar" id="st-nav-bar">
+        <ul class="nav nav-pills nav-justified">
+            <li role="presentation" class="st-bar" id="back"><a href="{% url 'enjoy' %}">返回</a></li>
+        </ul>
+    </nav>
+    <!-- scroll content -->
+    <!-- 头部 -->
+    <header class="scroll-header">
+        <h1>{{ enjoy.title }}</h1>
+        {% if enjoy.desc == None %}
+        <h4></h4>
+        {% else %}
+        <h4>{{ enjoy.desc }}</h4>
+        {% endif %}
+        {% autoescape off %}
+        <p>{{ enjoy.enjoy_info }}</p>
+        {% endautoescape %}
+    </header>
+    <!-- 内容 -->
+    <article class="scroll-content">
+        <div class="item-group">
+            {% for img in images %}
+            <div class="content-item" style="background-image: url({{ img.img}})">
+                <div class="item-box photo-box">
+                    <a href="{{ img.img }}" data-lightbox="roadtrip"></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+    <div class="scroll-bar">
+        <div class="scroll-slider"></div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script>
+        new CusScrollBar({
+            contSelector: '.scroll-content', //滚动内容区选择器
+            barSelector: '.scroll-bar', //滚动条选择器
+            sliderSelector: '.scroll-slider', //滚动滑块选择器
+            itemCount: '{{ count }}', //内容总数
+            itemWidth: '400' //内容宽度
+        });
+    </script>
+{% endblock %}

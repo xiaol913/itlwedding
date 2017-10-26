@@ -10,15 +10,13 @@ class VideoLabelSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = VideoLabel
-        fields = "__all__"
+        fields = ("name", "label", "desc")
 
 
 class VideoInfoSerializer(serializers.ModelSerializer):
     """
     婚礼视频详情页
     """
-    label = VideoLabelSerializer()
-
     class Meta:
         model = VideoInfo
         fields = "__all__"

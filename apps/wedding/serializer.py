@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import WeddingLabel, WeddingArea, WeddingInfo
+from .models import WeddingLabel, WeddingArea, WeddingInfo, WeddingInfoImage
 
 
 class WeddingLabelSerializer(serializers.ModelSerializer):
@@ -11,23 +11,31 @@ class WeddingLabelSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class WeddingAreaSerializer(serializers.ModelSerializer):
+class WeddingInfoImageSerializer(serializers.ModelSerializer):
     """
-    海外区域
+    海外婚礼详情图片
     """
-    label = WeddingLabelSerializer()
-
     class Meta:
-        model = WeddingArea
-        fields = "__all__"
+        model = WeddingInfoImage
+        fields = ("img",)
 
 
 class WeddingInfoSerializer(serializers.ModelSerializer):
     """
     海外婚礼详情
     """
-    area_name = WeddingAreaSerializer()
+    images = WeddingInfoImageSerializer(many=True)
 
     class Meta:
         model = WeddingInfo
         fields = "__all__"
+
+
+class WeddingAreaSerializer(serializers.ModelSerializer):
+    """
+    海外区域
+    """
+    class Meta:
+        model = WeddingArea
+        fields = "__all__"
+

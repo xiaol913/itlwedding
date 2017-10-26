@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from rest_framework import serializers
 
-from .models import PhotoLabel, PhotoInfo
+from .models import PhotoLabel, PhotoInfo, PhotoInfoImage
 
 
 class PhotoLabelSerializer(serializers.ModelSerializer):
@@ -13,11 +13,20 @@ class PhotoLabelSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class PhotoInfoImageSerializer(serializers.ModelSerializer):
+    """
+    环球旅拍照片
+    """
+    class Meta:
+        model = PhotoInfoImage
+        fields = ("img",)
+
+
 class PhotoInfoSerializer(serializers.ModelSerializer):
     """
     环球旅拍详情页
     """
-    label = PhotoLabelSerializer()
+    images = PhotoInfoImageSerializer(many=True)
 
     class Meta:
         model = PhotoInfo
