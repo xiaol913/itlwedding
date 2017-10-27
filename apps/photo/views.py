@@ -1,9 +1,5 @@
-import json
-
 from django.shortcuts import render
 from django.views.generic import View
-
-import requests
 
 from rest_framework import viewsets, mixins
 
@@ -37,8 +33,8 @@ class PhotoListView(View):
     环球旅拍列表页
     """
     def get(self, request):
-        photos = json.loads(requests.get(url='http://127.0.0.1:8000/api/photo/').text)
-        label = json.loads(requests.get(url='http://127.0.0.1:8000/api/photo_label/').text)[0]
+        photos = PhotoInfoSerializer(PhotoInfo.objects.all(), many=True).data
+        label = PhotoLabelSerializer(PhotoLabel.objects.all(), many=True).data[0]
         count = len(photos)
 
         return render(request, "photo.html", {
@@ -53,7 +49,7 @@ class PhotoInfoView(View):
     环球旅拍详情页
     """
     def get(self, request, photo_id):
-        photo = json.loads(requests.get(url='http://127.0.0.1:8000/api/photo/' + str(photo_id)).text)
+        photo = PhotoInfoSerializer(PhotoInfo.objects.get(id=int(photo_id))).data
         images = photo['images']
         count = len(images)
 

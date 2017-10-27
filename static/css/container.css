@@ -1,4 +1,4 @@
-@keyframes banner_1 {
+@keyframes banner_h1 {
   0% {
     opacity: 0;
     -webkit-transform: rotateX(90deg) translateX(-200px);
@@ -35,84 +35,6 @@
     -ms-transform: translateX(0px);
     -o-transform: translateX(0px);
     transform: translateX(0px);
-  }
-}
-@keyframes banner_2 {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotateY(90deg) translateX(200px);
-    -moz-transform: rotateY(90deg) translateX(200px);
-    -ms-transform: rotateY(90deg) translateX(200px);
-    -o-transform: rotateY(90deg) translateX(200px);
-    transform: rotateY(90deg) translateX(200px);
-  }
-  70% {
-    -webkit-transform: rotateY(0deg) translateX(-20px);
-    -moz-transform: rotateY(0deg) translateX(-20px);
-    -ms-transform: rotateY(0deg) translateX(-20px);
-    -o-transform: rotateY(0deg) translateX(-20px);
-    transform: rotateY(0deg) translateX(-20px);
-  }
-  80% {
-    -webkit-transform: translateX(20px);
-    -moz-transform: translateX(20px);
-    -ms-transform: translateX(20px);
-    -o-transform: translateX(20px);
-    transform: translateX(20px);
-  }
-  90% {
-    -webkit-transform: translateX(-20px);
-    -moz-transform: translateX(-20px);
-    -ms-transform: translateX(-20px);
-    -o-transform: translateX(-20px);
-    transform: translateX(-20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-    -moz-transform: translateX(0px);
-    -ms-transform: translateX(0px);
-    -o-transform: translateX(0px);
-    transform: translateX(0px);
-  }
-}
-@keyframes banner_3 {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotateX(90deg);
-    -moz-transform: rotateX(90deg);
-    -ms-transform: rotateX(90deg);
-    -o-transform: rotateX(90deg);
-    transform: rotateX(90deg);
-  }
-  70% {
-    -webkit-transform: rotateX(-30deg);
-    -moz-transform: rotateX(-30deg);
-    -ms-transform: rotateX(-30deg);
-    -o-transform: rotateX(-30deg);
-    transform: rotateX(-30deg);
-  }
-  80% {
-    -webkit-transform: rotateX(30deg);
-    -moz-transform: rotateX(30deg);
-    -ms-transform: rotateX(30deg);
-    -o-transform: rotateX(30deg);
-    transform: rotateX(30deg);
-  }
-  90% {
-    -webkit-transform: rotateX(-30deg);
-    -moz-transform: rotateX(-30deg);
-    -ms-transform: rotateX(-30deg);
-    -o-transform: rotateX(-30deg);
-    transform: rotateX(-30deg);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    -ms-transform: rotateX(0deg);
-    -o-transform: rotateX(0deg);
-    transform: rotateX(0deg);
   }
 }
 @keyframes banner_p {
@@ -365,20 +287,10 @@
   -o-animation: banner_p 1.5s forwards 1s;
   animation: banner_p 1.5s forwards 1s;
 }
-.fade .carousel-inner .item.active #banner_1 h1 {
-  -webkit-animation: banner_1 1.5s ease-in forwards;
-  -o-animation: banner_1 1.5s ease-in forwards;
-  animation: banner_1 1.5s ease-in forwards;
-}
-.fade .carousel-inner .item.active #banner_2 h1 {
-  -webkit-animation: banner_2 1.5s ease-in forwards;
-  -o-animation: banner_2 1.5s ease-in forwards;
-  animation: banner_2 1.5s ease-in forwards;
-}
-.fade .carousel-inner .item.active #banner_3 h1 {
-  -webkit-animation: banner_3 1.5s ease-in forwards;
-  -o-animation: banner_3 1.5s ease-in forwards;
-  animation: banner_3 1.5s ease-in forwards;
+.fade .carousel-inner .item.active h1 {
+  -webkit-animation: banner_h1 1.5s ease-in forwards;
+  -o-animation: banner_h1 1.5s ease-in forwards;
+  animation: banner_h1 1.5s ease-in forwards;
 }
 .fade .left,
 .fade .right {
@@ -417,7 +329,6 @@
   width: 400px;
   height: 100%;
   display: inline-block;
-  background-image: url("../imgs/banner_1.jpg");
   background-size: cover;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;

@@ -1,9 +1,6 @@
-import json
-
 from django.shortcuts import render
 from django.views.generic import View
 
-import requests
 from rest_framework import viewsets, mixins
 
 from .models import EnjoyInfo, EnjoyLabel
@@ -36,13 +33,13 @@ class EnjoyListView(View):
     客片列表页
     """
     def get(self, request):
-        enjoy_queryset = json.loads(requests.get(url='http://127.0.0.1:8000/api/enjoy/').text)
-        label_queryset = json.loads(requests.get(url='http://127.0.0.1:8000/api/enjoy_label/').text)
-        label = label_queryset[0]
-        count = len(enjoy_queryset)
+        enjoys = EnjoyInfoSerializer(EnjoyInfo.objects.all(), many=True).data
+        count = len(enjoys)
+
+        label = EnjoyLabelSerializer(EnjoyLabel.objects.all(), many=True).data[0]
 
         return render(request, "enjoy.html", {
-            "enjoys": enjoy_queryset,
+            "enjoys": enjoys,
             "label": label,
             "count": count,
         })
@@ -53,7 +50,7 @@ class EnjoyInfoView(View):
     客片详情页
     """
     def get(self, request, enjoy_id):
-        enjoy = json.loads(requests.get(url='http://127.0.0.1:8000/api/enjoy/' + str(enjoy_id)).text)
+        enjoy = EnjoyInfoSerializer(EnjoyInfo.objects.get(id=enjoy_id)).data
         images = enjoy['images']
         count = len(images)
 

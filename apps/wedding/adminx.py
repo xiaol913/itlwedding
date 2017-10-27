@@ -33,4 +33,3 @@ class WeddingInfoImageAdmin(object):
 xadmin.site.register(WeddingArea, WeddingAreaAdmin)
 xadmin.site.register(WeddingInfo, WeddingInfoAdmin)
 xadmin.site.register(WeddingLabel, WeddingLabelAdmin)
-# xadmin.site.register(WeddingInfoImage, WeddingInfoImageAdmin)

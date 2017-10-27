@@ -36,7 +36,6 @@ class EnjoyInfoImageAdmin(object):
 
 xadmin.site.register(EnjoyLabel, EnjoyLabelAdmin)
 xadmin.site.register(EnjoyInfo, EnjoyInfoAdmin)
-# xadmin.site.register(EnjoyInfoImage, EnjoyInfoImageAdmin)
 
 xadmin.site.register(views.BaseAdminView, BaseSetting)
 xadmin.site.register(views.CommAdminView, GlobalSetting)

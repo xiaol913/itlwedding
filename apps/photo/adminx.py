@@ -25,4 +25,3 @@ class PhotoInfoImageAdmin(object):
 
 xadmin.site.register(PhotoLabel, PhotoLabelAdmin)
 xadmin.site.register(PhotoInfo, PhotoInfoAdmin)
-# xadmin.site.register(PhotoInfoImage, PhotoInfoImageAdmin)

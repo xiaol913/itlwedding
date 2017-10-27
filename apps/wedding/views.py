@@ -1,10 +1,8 @@
-import json
-
 from django.shortcuts import render
 from django.views import View
 
 from django_filters.rest_framework import DjangoFilterBackend
-import requests
+
 from rest_framework import viewsets, mixins
 from rest_framework.pagination import PageNumberPagination
 
@@ -31,6 +29,17 @@ class WeddingLabelViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     serializer_class = WeddingLabelSerializer
 
 
+class WeddingAreaViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    list:
+        海外婚礼区域列表
+    retrieve:
+        海外婚礼区域信息
+    """
+    queryset = WeddingArea.objects.all()
+    serializer_class = WeddingAreaSerializer
+
+
 class WeddingListViewSet(viewsets.ReadOnlyModelViewSet):
     """
     list:
@@ -44,37 +53,26 @@ class WeddingListViewSet(viewsets.ReadOnlyModelViewSet):
     filter_fields = ('area_id',)
 
 
-class WeddingAreaViewSet(viewsets.ReadOnlyModelViewSet):
-    """
-    list:
-        海外婚礼区域列表
-    retrieve:
-        海外婚礼区域信息
-    """
-    queryset = WeddingArea.objects.all()
-    serializer_class = WeddingAreaSerializer
-
-
 class WeddingListView(View):
     """
     海外婚礼列表
     """
     def get(self, request):
-        area_id = request.GET.get('area_id')
-        label_queryset = json.loads(requests.get(url='http://127.0.0.1:8000/api/wedding_label/').text)
-        area_queryset = json.loads(requests.get(url='http://127.0.0.1:8000/api/wedding_area/').text)
-        wedding_queryset = json.loads(requests.get(url='http://127.0.0.1:8000/api/wedding/').text)
-        if area_id:
-            wedding_queryset = json.loads(requests.get(
-                url='http://127.0.0.1:8000/api/wedding/?area_id=' + area_id).text)
-            area_id = int(area_id)
+        label = WeddingLabelSerializer(WeddingLabel.objects.all(), many=True).data[0]
+        areas = WeddingAreaSerializer(WeddingArea.objects.all(), many=True).data
 
-        count = len(wedding_queryset)
-        label = label_queryset[0]
+        area_id = request.GET.get('area_id')
+        if area_id:
+            area_id = int(area_id)
+            wedding = WeddingInfoSerializer(WeddingInfo.objects.filter(area_id=area_id), many=True).data
+        else:
+            wedding = WeddingInfoSerializer(WeddingInfo.objects.all(), many=True).data
+
+        count = len(wedding)
 
         return render(request, "wedding.html", {
-            "areas": area_queryset,
-            "weddings": wedding_queryset,
+            "areas": areas,
+            "weddings": wedding,
             "label": label,
             "count": count,
             "area_id": area_id,
@@ -86,12 +84,12 @@ class WeddingInfoView(View):
     海外婚礼详情
     """
     def get(self, request, wedding_id):
-        wedding_queryset = json.loads(requests.get(url='http://127.0.0.1:8000/api/wedding/' + str(wedding_id)).text)
-        images = wedding_queryset['images']
+        wedding = WeddingInfoSerializer(WeddingInfo.objects.get(id=int(wedding_id))).data
+        images = wedding['images']
         count = len(images)
 
         return render(request, "wedding-detail.html", {
-            "wedding": wedding_queryset,
+            "wedding": wedding,
             "images": images,
             "count": count,
         })

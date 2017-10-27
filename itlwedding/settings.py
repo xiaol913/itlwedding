@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'xadmin',
     'wedding',
+    'banner',
     'enjoy',
     'photo',
     'video',

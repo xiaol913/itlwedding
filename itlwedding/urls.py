@@ -25,6 +25,7 @@ from wedding.views import WeddingListViewSet, WeddingLabelViewSet, WeddingAreaVi
 from photo.views import PhotoListViewSet, PhotoLabelViewSet
 from enjoy.views import EnjoyListViewSet, EnjoyLabelViewSet
 from video.views import VideoListViewSet, VideoLabelViewSet
+from banner.views import BannerView, BannerViewSet
 
 import xadmin
 
@@ -48,6 +49,8 @@ router.register(r'wedding', WeddingListViewSet, base_name="海外婚礼")
 router.register(r'wedding_area', WeddingAreaViewSet, base_name="海外婚礼区域")
 # 配置环球旅拍Label url
 router.register(r'wedding_label', WeddingLabelViewSet, base_name="海外婚礼标签")
+# 配置轮播图url
+router.register(r'banner', BannerViewSet, base_name="轮播图")
 
 urlpatterns = [
     # Xadmin管理页面
@@ -66,7 +69,7 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 
     # 主页
-    url(r'^$', TemplateView.as_view(template_name="index.html"), name="index"),
+    url(r'^$', BannerView.as_view(), name="index"),
 
     # 关于我们
     url(r'^about/', TemplateView.as_view(template_name="about.html"), name="about"),
