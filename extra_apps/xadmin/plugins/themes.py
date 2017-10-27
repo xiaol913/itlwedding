@@ -9,6 +9,7 @@ from xadmin.sites import site
 from xadmin.models import UserSettings
 from xadmin.views import BaseAdminPlugin, BaseAdminView
 from xadmin.util import static, json
+import requests
 import six
 if six.PY2:
     import urllib
@@ -71,12 +72,18 @@ class ThemePlugin(BaseAdminPlugin):
             else:
                 ex_themes = []
                 try:
-                    h = httplib2.Http()
-                    resp, content = h.request("http://bootswatch.com/api/3.json", 'GET', '',
-                        headers={"Accept": "application/json", "User-Agent": self.request.META['HTTP_USER_AGENT']})
-                    if six.PY3:
-                        content = content.decode()
-                    watch_themes = json.loads(content)['themes']
+                    flag = False
+                    if flag:
+                        h = httplib2.Http()
+                        resp, content = h.request("http://bootswatch.com/api/3.json", 'GET', '',
+                                                  headers={"Accept": "application/json",
+                                                           "User-Agent": self.request.META['HTTP_USER_AGENT']})
+                    else:
+                        content = requests.get("https://bootswatch.com/api/3.json")
+                        if six.PY3:
+                            content = content.decode()
+                        watch_themes = json.loads(content)['themes']
+
                     ex_themes.extend([
                         {'name': t['name'], 'description': t['description'],
                             'css': t['cssMin'], 'thumbnail': t['thumbnail']}

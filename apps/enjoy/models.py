@@ -45,6 +45,11 @@ class EnjoyInfo(models.Model):
     def __str__(self):
         return self.title
 
+    def get_images_nums(self):
+        return self.images.all().count()
+
+    get_images_nums.short_description = "图片数"
+
 
 class EnjoyInfoImage(models.Model):
     """

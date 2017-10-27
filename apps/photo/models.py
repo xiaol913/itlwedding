@@ -44,6 +44,11 @@ class PhotoInfo(models.Model):
     def __str__(self):
         return self.name
 
+    def get_images_nums(self):
+        return self.images.all().count()
+
+    get_images_nums.short_description = "图片数"
+
 
 class PhotoInfoImage(models.Model):
     """

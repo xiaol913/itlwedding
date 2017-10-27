@@ -67,6 +67,10 @@ class WeddingInfo(models.Model):
         verbose_name = "海外婚礼详情页"
         verbose_name_plural = verbose_name
 
+    def get_images_nums(self):
+        return self.images.all().count()
+    get_images_nums.short_description = "图片数"
+
     def __str__(self):
         return self.name
 

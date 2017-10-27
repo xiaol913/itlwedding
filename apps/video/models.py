@@ -43,3 +43,9 @@ class VideoInfo(models.Model):
 
     def __str__(self):
         return self.title
+
+    def go_to(self):
+        from django.utils.safestring import mark_safe
+        return mark_safe("<a href='"+self.video_url+"'>跳转</a>")
+
+    go_to.short_description = "跳转"
