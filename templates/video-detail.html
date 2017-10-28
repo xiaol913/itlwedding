@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block container %}
+    <!-- nav header -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <a class="navbar-brand" href="#"></a>
+        </button>
+    </div>
     <!-- nav bar -->
-    <nav class="st-nav-bar" id="st-nav-bar">
-
+    <nav class="st-nav-bar nav-menu collapse navbar-collapse full-padding" id="bs-example-navbar-collapse-1">
         <ul class="nav nav-pills nav-justified">
             <li role="presentation" class="st-bar" id="back"><a href="{% url 'video' %}">返回</a></li>
         </ul>
@@ -11,7 +17,6 @@
     <!-- scroll content -->
     <!-- 头部 -->
     <div class="video-header">{{ video.title }}</div>
-    <div class="video-info">{{ video.video_info }}</div>
     <!-- 内容 -->
     <div class="video-frame">
         <iframe src="{{ video.video_url }}"></iframe>

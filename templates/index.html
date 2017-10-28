@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block container %}
+    <!-- nav header -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <a class="navbar-brand" href="#"></a>
+        </button>
+    </div>
     <!-- nav bar -->
-    <nav class="st-nav-bar">
+    <nav class="st-nav-bar nav-menu collapse navbar-collapse full-padding" id="bs-example-navbar-collapse-1">
         <ul class="nav nav-pills nav-justified">
             <li role="presentation" class="st-bar active"><a href="{% url 'index' %}">首页</a></li>
             <li role="presentation" class="st-bar"><a href="{% url 'wedding' %}">海外婚礼</a></li>

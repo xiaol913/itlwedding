@@ -30,7 +30,6 @@ class VideoInfo(models.Model):
     """
     title = models.CharField(default="", max_length=50, verbose_name="视频标题", help_text="视频标题")
     front_img = models.ImageField(upload_to="images/video/front/", max_length=200, verbose_name="封面图", help_text="封面图")
-    video_info = models.TextField(default="", max_length=200, verbose_name="视频描述", help_text="视频描述")
     video_desc = UEditorField(default="", verbose_name="视频描述", help_text="视频描述", width=1000, height=300,
                               filePath="images/video/img/", imagePath="images/video/img/", null=True, blank=True)
     video_url = models.URLField(default="", max_length=200, verbose_name="视频链接", help_text="视频链接")

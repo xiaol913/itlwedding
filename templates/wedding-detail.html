@@ -8,8 +8,15 @@
     <script src="{% static 'js/lightbox.js' %}"></script>
 {% endblock %}
 {% block container %}
+    <!-- nav header -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <a class="navbar-brand" href="#"></a>
+        </button>
+    </div>
     <!-- nav bar -->
-    <nav class="st-nav-bar" id="st-nav-bar">
+    <nav class="st-nav-bar nav-menu collapse navbar-collapse full-padding" id="bs-example-navbar-collapse-1">
         <ul class="nav nav-pills nav-justified">
             <li role="presentation" class="st-bar active" id="hotel"><a href="#">酒店介绍</a></li>
             <li role="presentation" class="st-bar" id="place"><a href="#">场地信息</a></li>

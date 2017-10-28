@@ -4,8 +4,15 @@
     <script src="{% static 'js/scroll.js' %}"></script>
 {% endblock %}
 {% block container %}
+    <!-- nav header -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <a class="navbar-brand" href="#"></a>
+        </button>
+    </div>
     <!-- nav bar -->
-    <nav class="st-nav-bar">
+    <nav class="st-nav-bar nav-menu collapse navbar-collapse full-padding" id="bs-example-navbar-collapse-1">
         <ul class="nav nav-pills nav-justified">
             <li role="presentation" class="st-bar"><a href="{% url 'index' %}">首页</a></li>
             <li role="presentation" class="st-bar"><a href="{% url 'wedding' %}">海外婚礼</a></li>
@@ -22,7 +29,7 @@
         <h4>{{ label.desc }}</h4>
     </header>
     <!-- 内容 -->
-    <article class="scroll-content">
+    <article class="scroll-content" id="scroll-content">
         <div class="item-group">
             {% for enjoy in enjoys %}
             <div class="content-item" style="background-image: url({{ enjoy.front_img }})">
@@ -41,18 +48,27 @@
             {% endfor %}
         </div>
     </article>
-    <div class="scroll-bar">
-        <div class="scroll-slider"></div>
+    <div class="scroll-bar" id="scroll-bar">
+        <div class="scroll-slider" id="scroll-slider"></div>
     </div>
 {% endblock %}
 {% block script %}
     <script>
+        var items = document.getElementsByClassName('content-item');
+        var itemWidth = 0;
+        if(items.length > 0){
+            itemWidth = items.item(0).clientWidth;
+        }
         new CusScrollBar({
             contSelector: '.scroll-content', //滚动内容区选择器
             barSelector: '.scroll-bar', //滚动条选择器
             sliderSelector: '.scroll-slider', //滚动滑块选择器
             itemCount: '{{ count }}', //内容总数
-            itemWidth: '400' //内容宽度
+            itemWidth: itemWidth //内容宽度
         });
+        var item = document.getElementById('scroll-content');
+        var bar = document.getElementById('scroll-bar');
+        var slider = document.getElementById('scroll-slider');
+        touchMove(item, {{ count }}, bar, slider, itemWidth);
     </script>
 {% endblock %}
