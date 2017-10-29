@@ -169,7 +169,4 @@ function touchMove(element, count, bar, slider, width) {
             }
         }
     });
-    hammer.on('panend', function () {
-
-    });
 }
