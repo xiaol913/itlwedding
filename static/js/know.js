@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var title = $('.panel-heading'),
         content = $('.panel-body'),
-        isClosed = false;
+        isClosed = true;
 
     title.click(function () {
         if (isClosed == true) {
