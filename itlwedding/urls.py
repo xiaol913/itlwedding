@@ -26,6 +26,10 @@ from photo.views import PhotoListViewSet, PhotoLabelViewSet
 from enjoy.views import EnjoyListViewSet, EnjoyLabelViewSet
 from video.views import VideoListViewSet, VideoLabelViewSet
 from banner.views import BannerView, BannerViewSet
+from about.views import AboutViewSet
+from know.views import KnowViewSet
+from contact.views import ContactViewSet
+
 
 import xadmin
 
@@ -51,6 +55,12 @@ router.register(r'wedding_area', WeddingAreaViewSet, base_name="海外婚礼区�
 router.register(r'wedding_label', WeddingLabelViewSet, base_name="海外婚礼标签")
 # 配置轮播图url
 router.register(r'banner', BannerViewSet, base_name="轮播图")
+# 配置关于我们url
+router.register(r'about', AboutViewSet, base_name="关于我们")
+# 配置婚礼须知url
+router.register(r'know', KnowViewSet, base_name="婚礼须知")
+# 配置联系我们url
+router.register(r'contact', ContactViewSet, base_name="联系我们")
 
 urlpatterns = [
     # Xadmin管理页面
@@ -72,13 +82,13 @@ urlpatterns = [
     url(r'^$', BannerView.as_view(), name="index"),
 
     # 关于我们
-    url(r'^about/', TemplateView.as_view(template_name="about.html"), name="about"),
+    url(r'^about/', include('about.urls'), name="about"),
 
     # 联系我们
-    url(r'^contact/', TemplateView.as_view(template_name="contact.html"), name="contact"),
+    url(r'^contact/', include("contact.urls"), name="contact"),
 
     # 须知页面
-    url(r'^know/', TemplateView.as_view(template_name="know.html"), name="know"),
+    url(r'^know/', include("know.urls"), name="know"),
 
     # 婚礼视频url配置
     url(r'^video/', include('video.urls'), name="video"),

@@ -1,10 +1,49 @@
 @import "global";
+//768 <= width < 992
+@media screen and (max-width: 991px) and (min-width: 768px){
+  //关于我们标题字体
+  .about-content{
+    h1{
+      font-size: 27px;
+    }
+  }
+  //移动端婚礼详情页
+  .st-content{
+    .row{
+      height: 18%;
+    }
+    :nth-child(2){
+      height: 54%;
+      .wed-item{
+        height: 33%;
+      }
+      .wed-item.hotel-img{
+        height: 33%;
+      }
+    }
+    .modal.fade{
+      height: 100%;
+      h1{
+        font-size: 27px;
+      }
+      label{
+        font-size: 11px;
+      }
+    }
+  }
+}
 
 //width < 768px
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
   //整体页面
   #page-content-wrapper{
     margin: 0 10px;
+  }
+  //关于我们标题字体
+  .about-content{
+    h1{
+      font-size: 18px;
+    }
   }
   //移动端侧边栏
   .sidebar-nav{
@@ -56,7 +95,7 @@
     #bg-color(white);
   }
   //移动端banner区
-  .fade{
+  .carousel.fade{
     padding: 0;
     top: 40%;
     .carousel-inner{
@@ -121,44 +160,33 @@
       }
     }
   }
-  //移动端婚礼详情页
-  .wed-item{
-    padding-top: 0;
-    .item-content{
-      height: 100%;
-      h1{
-        #ft-size(medium);
-      }
-      label{
-        #ft-size(small)
-      }
-      p{
-        font-size: 10px;
-      }
-    }
-    .item-img{
-      img{
-        height: 50%;
-        position: relative;
-        top: 20%;
-      }
-      &:nth-child(2){
-        height: 49%;
-      }
-      &:nth-child(3){
-        height: 49%;
-      }
-      &:nth-child(4){
-        height: 49%;
-      }
-      &:nth-child(5){
-        height: 49%;
-      }
-    }
-  }
   //移动端视频详情页
   .video-header{
     padding-top: 10px;
     #ft-size(large);
+  }
+  //移动端婚礼详情页
+  .st-content{
+    .row{
+      height: 18%;
+    }
+    :nth-child(2){
+      height: 54%;
+      .wed-item{
+        height: 33%;
+      }
+      .wed-item.hotel-img{
+        height: 33%;
+      }
+    }
+    .modal.fade{
+      height: 100%;
+      h1{
+        font-size: 18px;
+      }
+      label{
+        font-size: 9px;
+      }
+    }
   }
 }

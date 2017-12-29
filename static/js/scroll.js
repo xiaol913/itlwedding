@@ -155,18 +155,19 @@ function touchMove(element, count, bar, slider, width) {
     var maxSliderPosition = parseInt(getCss(bar,"width")) - parseInt(getCss(slider,"width"));
     element.style.left = getCss(element,"left");
     hammer.on('panstart', function (e) {
-        if(e.pointerType == 'touch'){
+        // console.log(e);
+        // if(e.pointerType == 'touch'){
             // 获取当前left值
             x = parseInt(element.style.left);
-        }
+        // }
     });
     hammer.on('panmove', function (e) {
-        if(e.pointerType == "touch"){
+        // if(e.pointerType == "touch"){
             var left = x + e.deltaX;
             if(left > - width && left < 0){
                 element.style.left = left + 'px';
                 slider.style.left = Math.max(-maxSliderPosition, -maxSliderPosition*parseInt(element.style.left)/width) + 'px';
             }
-        }
+        // }
     });
 }

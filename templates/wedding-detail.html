@@ -19,91 +19,101 @@
     <!-- nav bar -->
     <nav class="st-nav-bar nav-menu collapse navbar-collapse full-padding" id="bs-example-navbar-collapse-1">
         <ul class="nav nav-pills nav-justified">
-            <li role="presentation" class="st-bar active" id="hotel"><a href="#">酒店介绍</a></li>
-            <li role="presentation" class="st-bar" id="place"><a href="#">场地信息</a></li>
-            <li role="presentation" class="st-bar" id="server"><a href="#">专业服务</a></li>
-            <li role="presentation" class="st-bar" id="know"><a href="#">预约须知</a></li>
             <li role="presentation" class="st-bar" id="back"><a href="{% url 'wedding' %}">返回</a></li>
         </ul>
     </nav>
     <!-- scroll content -->
     <article class="st-content">
-        <div id="hotel-info" class="wed-item active">
-            <div class="item-content">
-                <h1>{{ wedding.name }}</h1>
-                <label>{{ wedding.desc }}</label>
-                {% autoescape off %}
-                    {{ wedding.hotel_info }}
-                {% endautoescape %}
-            </div>
-            <div class="item-img right-left">
-                {% if images.0 %}<a href="{{ images.0.img }}" data-lightbox="roadtrip"><img src="{{ images.0.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img left-right">
-                {% if images.1 %}<a href="{{ images.1.img }}" data-lightbox="roadtrip"><img src="{{ images.1.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img left-right">
-                {% if images.2 %}<a href="{{ images.2.img }}" data-lightbox="roadtrip"><img src="{{ images.2.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img right-left">
-                {% if images.3 %}<a href="{{ images.3.img }}" data-lightbox="roadtrip"><img src="{{ images.3.img }}"></a>{% endif %}
-            </div>
-        </div>
-        <div id="place-info" class="wed-item">
-            <div class="item-content">
-                {% autoescape off %}
-                    {{ wedding.place_info }}
-                {% endautoescape %}
-            </div>
-            <div class="item-img up-down">
-                {% if images.4 %}<a href="{{ images.4.img }}" data-lightbox="roadtrip"><img src="{{ images.4.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img down-up">
-                {% if images.5 %}<a href="{{ images.5.img }}" data-lightbox="roadtrip"><img src="{{ images.5.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img down-up">
-                {% if images.6 %}<a href="{{ images.6.img }}" data-lightbox="roadtrip"><img src="{{ images.6.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img up-down">
-                {% if images.7 %}<a href="{{ images.7.img }}" data-lightbox="roadtrip"><img src="{{ images.7.img }}"></a>{% endif %}
+        <div class="row">
+            <div class="wed-item col-md-4 col-md-offset-4">
+                <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#hotel-desc">酒店介绍</button>
+                <div class="modal fade" id="hotel-desc" tabindex="-1" role="dialog">
+                   <div class="modal-content" role="document">
+                       <div class="modal-header">
+                            <span class="modal-title" id="myModalLabel">酒店介绍</span>
+                       </div>
+                       <div class="modal-body">
+                            <h1>{{ wedding.name }}</h1>
+                            <label>{{ wedding.desc }}</label>
+                            {% autoescape off %}
+                                {{ wedding.hotel_info }}
+                            {% endautoescape %}
+                       </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+                      </div>
+                   </div>
+                </div>
             </div>
         </div>
-        <div id="server-info" class="wed-item">
-            <div class="item-content">
-                {% autoescape off %}
-                    {{ wedding.server_info }}
-                {% endautoescape %}
+        <div class="row">
+            <div class="wed-item col-md-4">
+                <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#place-desc">场地信息</button>
+                <div class="modal fade" id="place-desc" tabindex="-1" role="dialog">
+                   <div class="modal-content" role="document">
+                       <div class="modal-header">
+                            <span class="modal-title" id="myModalLabel">场地信息</span>
+                       </div>
+                       <div class="modal-body">
+                            {% autoescape off %}
+                                {{ wedding.place_info }}
+                            {% endautoescape %}
+                       </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+                      </div>
+                   </div>
+                </div>
             </div>
-            <div class="item-img left-right">
-                {% if images.8 %}<a href="{{ images.8.img }}" data-lightbox="roadtrip"><img src="{{ images.8.img }}"></a>{% endif %}
+            <div class="wed-item col-md-4 hotel-img" style="background-image: url({{ images.0.img}})">
+                <div class="item-box photo-box">
+                    <a href="{{ images.0.img }}" data-lightbox="roadtrip"></a>
+                </div>
+                {% for img in images %}
+                    <div>
+                    {% if img.img != images.0.img %}
+                        <a href="{{ img.img }}" data-lightbox="roadtrip"></a>
+                    {% endif %}
+                    </div>
+                {% endfor %}
             </div>
-            <div class="item-img up-down">
-                {% if images.9 %}<a href="{{ images.9.img }}" data-lightbox="roadtrip"><img src="{{ images.9.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img down-up">
-                {% if images.10 %}<a href="{{ images.10.img }}" data-lightbox="roadtrip"><img src="{{ images.10.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img right-left">
-                {% if images.11 %}<a href="{{ images.11.img }}" data-lightbox="roadtrip"><img src="{{ images.11.img }}"></a>{% endif %}
+            <div class="wed-item col-md-4">
+                <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#server-desc">专业服务</button>
+                <div class="modal fade" id="server-desc" tabindex="-1" role="dialog">
+                   <div class="modal-content" role="document">
+                       <div class="modal-header">
+                            <span class="modal-title" id="myModalLabel">专业服务</span>
+                       </div>
+                       <div class="modal-body">
+                            {% autoescape off %}
+                                {{ wedding.server_info }}
+                            {% endautoescape %}
+                       </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+                      </div>
+                   </div>
+                </div>
             </div>
         </div>
-        <div id="know-info" class="wed-item">
-            <div class="item-content">
-                {% autoescape off %}
-                    {{ wedding.book_info }}
-                {% endautoescape %}
-            </div>
-            <div class="item-img up-down">
-                {% if images.12 %}<a href="{{ images.12.img }}" data-lightbox="roadtrip"><img src="{{ images.12.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img right-left">
-                {% if images.13 %}<a href="{{ images.13.img }}" data-lightbox="roadtrip"><img src="{{ images.13.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img left-right">
-                {% if images.14 %}<a href="{{ images.14.img }}" data-lightbox="roadtrip"><img src="{{ images.14.img }}"></a>{% endif %}
-            </div>
-            <div class="item-img down-up">
-                {% if images.15 %}<a href="{{ images.15.img }}" data-lightbox="roadtrip"><img src="{{ images.15.img }}"></a>{% endif %}
+        <div class="row">
+            <div class="wed-item col-md-4 col-md-offset-4">
+                <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#know-desc">预约须知</button>
+                <div class="modal fade" id="know-desc" tabindex="-1" role="dialog">
+                   <div class="modal-content" role="document">
+                       <div class="modal-header">
+                            <span class="modal-title" id="myModalLabel">预约须知</span>
+                       </div>
+                       <div class="modal-body">
+                            {% autoescape off %}
+                                {{ wedding.book_info }}
+                            {% endautoescape %}
+                       </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+                      </div>
+                   </div>
+                </div>
             </div>
         </div>
     </article>
