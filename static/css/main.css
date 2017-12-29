@@ -152,13 +152,13 @@ a {
   background-image: url("../imgs/pc_3.png");
 }
 .sidebar-nav li:nth-child(11) a:nth-child(1) {
-  background-position: -8px -64px;
+  background-position: -8px -8px;
 }
 .sidebar-nav li:nth-child(11) a:nth-child(2) {
-  background-position: -121px -64px;
+  background-position: -121px -8px;
 }
 .sidebar-nav li:nth-child(11) a:nth-child(3) {
-  background-position: -176px -64px;
+  background-position: -176px -8px;
 }
 .sidebar-nav li:nth-child(11) a:hover,
 .sidebar-nav li:nth-child(11).open a:hover {
