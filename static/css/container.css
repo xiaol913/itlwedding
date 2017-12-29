@@ -359,7 +359,6 @@
 .carousel.fade .left,
 .carousel.fade .right {
   opacity: 0;
-  margin-top: 60px;
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
   -o-transition: opacity 1s;
