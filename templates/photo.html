@@ -52,6 +52,24 @@
     <div class="scroll-bar" id="scroll-bar">
         <div class="scroll-slider" id="scroll-slider"></div>
     </div>
+    <div class="img-group">
+        {% for photo in photos %}
+            <div class="content-item">
+                <div class="words">
+                    <h3>{{ photo.name }}</h3>
+                    {% if photo.desc == None %}
+                    <p></p>
+                    {% else %}
+                    <p>{{ photo.desc }}</p>
+                    {% endif %}
+                    <a class="btn btn-default" href="{% url 'photo_detail' photo.id %}">More</a>
+                </div>
+                <div class="item-img">
+                    <img src="{{ photo.front_img }}" width="100%">
+                </div>
+            </div>
+            {% endfor %}
+    </div>
 {% endblock %}
 {% block script %}
     <script>

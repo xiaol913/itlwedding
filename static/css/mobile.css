@@ -89,20 +89,15 @@
   }
   .carousel.fade .carousel-inner .item .carousel-caption .banner_label h1 {
     width: 100%;
-    top: -70px;
     font-size: 22px;
-    color: #ddd;
     position: absolute;
-    text-shadow: 1px 1px;
   }
   .carousel.fade .carousel-inner .item .carousel-caption .banner_label p {
     margin: 0;
     width: 100%;
-    color: #ddd;
-    top: 180px;
+    top: 100px;
     position: relative;
     text-align: center;
-    text-shadow: 1px 1px;
   }
   .scroll-header {
     padding-top: 0;
@@ -157,5 +152,33 @@
   }
   .st-content .modal.fade label {
     font-size: 9px;
+  }
+  #page-content-wrapper .container {
+    overflow: inherit;
+  }
+  .st-content {
+    height: auto;
+  }
+  .scroll-content {
+    display: none;
+  }
+  .scroll-bar {
+    display: none;
+  }
+  .img-group img {
+    margin-top: 10px;
+  }
+  .img-group .content-item {
+    background: no-repeat;
+    background-size: 100%;
+  }
+  .img-group .content-item .words {
+    text-align: center;
+  }
+  .img-group .content-item .words h3 {
+    font-size: 16px;
+  }
+  .img-group .content-item .words p {
+    font-size: 10px;
   }
 }

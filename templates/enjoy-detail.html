@@ -50,6 +50,11 @@
     <div class="scroll-bar" id="scroll-bar">
         <div class="scroll-slider" id="scroll-slider"></div>
     </div>
+    <div class="img-group">
+    {% for img in images %}
+        <img src="{{ img.img }}" width="100%">
+    {% endfor %}
+    </div>
 {% endblock %}
 {% block script %}
     <script>

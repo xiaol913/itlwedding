@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
 {% endblock %}
 {% block js %}
-    <script src="{% static 'js/wed-detail.js' %}"></script>
+    <script src="{% static 'js/scroll.js' %}"></script>
     <script src="{% static 'js/lightbox.js' %}"></script>
 {% endblock %}
 {% block container %}
@@ -25,7 +25,7 @@
     <!-- scroll content -->
     <article class="st-content">
         <div class="row">
-            <div class="wed-item col-md-4 col-md-offset-4">
+            <div class="wed-item col-md-4 col-md-offset-2">
                 <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#hotel-desc">酒店介绍</button>
                 <div class="modal fade" id="hotel-desc" tabindex="-1" role="dialog">
                    <div class="modal-content" role="document">
@@ -45,8 +45,6 @@
                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="wed-item col-md-4">
                 <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#place-desc">场地信息</button>
                 <div class="modal fade" id="place-desc" tabindex="-1" role="dialog">
@@ -65,19 +63,9 @@
                    </div>
                 </div>
             </div>
-            <div class="wed-item col-md-4 hotel-img" style="background-image: url({{ images.0.img}})">
-                <div class="item-box photo-box">
-                    <a href="{{ images.0.img }}" data-lightbox="roadtrip"></a>
-                </div>
-                {% for img in images %}
-                    <div>
-                    {% if img.img != images.0.img %}
-                        <a href="{{ img.img }}" data-lightbox="roadtrip"></a>
-                    {% endif %}
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="wed-item col-md-4">
+        </div>
+        <div class="row">
+            <div class="wed-item col-md-4 col-md-offset-2">
                 <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#server-desc">专业服务</button>
                 <div class="modal fade" id="server-desc" tabindex="-1" role="dialog">
                    <div class="modal-content" role="document">
@@ -95,9 +83,7 @@
                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="wed-item col-md-4 col-md-offset-4">
+            <div class="wed-item col-md-4">
                 <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#know-desc">预约须知</button>
                 <div class="modal fade" id="know-desc" tabindex="-1" role="dialog">
                    <div class="modal-content" role="document">
@@ -117,4 +103,44 @@
             </div>
         </div>
     </article>
+    <div class="scroll-content" id="scroll-content">
+        <div class="item-group">
+            {% for img in images %}
+            <div class="content-item" style="background-image: url({{ img.img}})">
+                <div class="item-box photo-box">
+                    <a href="{{ img.img }}" data-lightbox="roadtrip"></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="scroll-bar" id="scroll-bar">
+        <div class="scroll-slider" id="scroll-slider"></div>
+    </div>
+    <div class="img-group">
+    {% for img in images %}
+        <img src="{{ img.img }}" width="100%">
+    {% endfor %}
+    </div>
+{% endblock %}
+{% block script %}
+    <script>
+        var items = document.getElementsByClassName('content-item');
+        var itemWidth = 0;
+        if(items.length > 0){
+            itemWidth = items.item(0).clientWidth;
+        }
+        $('.item-box').css({'width':itemWidth + 'px'});
+        new CusScrollBar({
+            contSelector: '.scroll-content', //滚动内容区选择器
+            barSelector: '.scroll-bar', //滚动条选择器
+            sliderSelector: '.scroll-slider', //滚动滑块选择器
+            itemCount: '{{ count }}', //内容总数
+            itemWidth: itemWidth+4 //内容宽度
+        });
+        var item = document.getElementById('scroll-content');
+        var bar = document.getElementById('scroll-bar');
+        var slider = document.getElementById('scroll-slider');
+        touchMove(item, {{ count }}, bar, slider, itemWidth+4);
+    </script>
 {% endblock %}

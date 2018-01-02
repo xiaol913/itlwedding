@@ -86,9 +86,11 @@ class WeddingInfoView(View):
     def get(self, request, wedding_id):
         wedding = WeddingInfoSerializer(WeddingInfo.objects.get(id=int(wedding_id))).data
         images = wedding['images']
+        count = len(images)
 
         return render(request, "wedding-detail.html", {
             "wedding": wedding,
             "images": images,
+            "count": count,
         })
 

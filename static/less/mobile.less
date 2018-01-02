@@ -106,20 +106,20 @@
             height:100%;
             h1{
               width: 100%;
-              top: -70px;
+              //top: -70px;
               #ft-size(big);
-              #ft-color(ddd);
+              //#ft-color(ddd);
               position: absolute;
-              text-shadow: 1px 1px;
+              //text-shadow: 1px 1px;
             }
             p{
               margin: 0;
               width: 100%;
-              #ft-color(ddd);
-              top: 180px;
+              //#ft-color(ddd);
+              top: 100px;
               position: relative;
               text-align: center;
-              text-shadow: 1px 1px;
+              //text-shadow: 1px 1px;
             }
           }
         }
@@ -186,6 +186,38 @@
       }
       label{
         font-size: 9px;
+      }
+    }
+  }
+  //移动端列表页
+  #page-content-wrapper .container{
+    overflow: inherit;
+  }
+  .st-content{
+    height: auto;
+  }
+  .scroll-content {
+    display: none;
+  }
+
+  .scroll-bar {
+    display: none;
+  }
+  .img-group {
+    img {
+      margin-top: 10px;
+    }
+    .content-item{
+      background: no-repeat;
+      background-size: 100%;
+      .words{
+        text-align: center;
+        h3{
+          font-size: 16px;
+        }
+        p{
+          font-size: 10px;
+        }
       }
     }
   }
