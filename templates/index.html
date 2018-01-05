@@ -6,7 +6,6 @@
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <a class="navbar-brand" href="#"></a>
-            <span id="talk" class="talk">点我</span>
         </button>
     </div>
     <!-- nav bar -->
@@ -24,8 +23,7 @@
         <!-- 轮播（Carousel）项目 -->
         <div class="carousel-inner" role="listbox">
             {% for banner in banners %}
-            <div class="item{% ifequal banner banners.0 %} active{% endifequal %}">
-                <img src="{{ banner.image }}">
+            <div class="item{% ifequal banner banners.0 %} active{% endifequal %}" style="background-image: url({{ banner.image }})">
                 <div class="carousel-caption" id="banner">
                     <div class="banner_label">
                         <h1>{{ banner.title }}</h1>

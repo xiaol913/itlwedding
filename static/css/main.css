@@ -14,6 +14,7 @@ a {
 }
 /* wrapper区域 */
 #wrapper {
+  background-color: #141618;
   height: 100%;
   padding-left: 0;
   -moz-transition: all 0.5s ease;
@@ -57,7 +58,7 @@ a {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #ddd;
+  background-color: #141618;
 }
 .sidebar-nav .sidebar-brand {
   padding-top: 10px;
@@ -90,11 +91,11 @@ a {
 }
 .sidebar-nav li:before {
   left: 50%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
 }
 .sidebar-nav li:after {
   right: 50%;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
 }
 .sidebar-nav li:nth-child(1):before,
 .sidebar-nav li:nth-child(10):before,
@@ -119,7 +120,7 @@ a {
   background-color: transparent;
 }
 .sidebar-nav li a {
-  color: #141914;
+  color: #fbfbfb;
   z-index: 2;
   display: block;
   padding: 10px 15px;
@@ -129,6 +130,7 @@ a {
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
   background-color: transparent;
+  color: #fbfbfb;
   text-decoration: none;
 }
 .sidebar-nav li a:hover {
@@ -139,6 +141,13 @@ a {
 .sidebar-nav li:nth-child(10) {
   padding: 0 15px;
   margin: 15px 0;
+}
+.sidebar-nav li:nth-child(10) p {
+  color: #fbfbfb;
+}
+.sidebar-nav li:nth-child(10) a:hover,
+.sidebar-nav li:nth-child(10).open a:hover {
+  color: #fbfbfb;
 }
 .sidebar-nav li:nth-child(11) {
   padding: 0 30px;
@@ -162,7 +171,7 @@ a {
 }
 .sidebar-nav li:nth-child(11) a:hover,
 .sidebar-nav li:nth-child(11).open a:hover {
-  color: #141914;
+  color: #fbfbfb;
 }
 /* 左侧导航栏开关 */
 .btn-bar {

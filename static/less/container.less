@@ -14,21 +14,24 @@
     margin: 0 10px;
     border: none;
     z-index: 99;
-    #ft-color(dark);
+    #ft-color(white);
     &:hover{
-      #ft-color(white);
-      background-color: rgba(0, 0, 0, 0.8);
+      #ft-color(dark);
+      background-color: #ddd;
     }
   }
   .st-bar.active>a,
   .st-bar.active>a:focus{
-    #ft-color(white);
+    #ft-color(dark);
     background-color: #ddd;
     &:hover{
       #ft-color(white);
-      background-color: rgba(0, 0, 0, 0.8);
+      #bg-color(black);
     }
   }
+}
+.navbar-toggle.collapsed{
+  background-color: inherit;
 }
 //内容区首页banner
 .carousel.fade{
@@ -36,22 +39,25 @@
   vertical-align: middle;
   opacity: 1;
   top: 50%;
+  height: 100%;
+  padding: 70px 0;
   position: relative;
   #transform-translateY(-50%);
   //banner区通用样式
   .carousel-inner{
+    height: 100%;
     border-radius: 10px;
     .item:first-child{
       top: auto;
       position: relative;
     }
     .item{
-      max-width: 1280px;
-      max-height: 450px;
       top: 0;
       opacity: 0;
       width: 100%;
       height: 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
       position: absolute;
       left: 0 !important;
       display: block !important;
@@ -69,7 +75,8 @@
         padding: 0;
         #bg-img("gridtile.png");
         .banner_label{
-          position: relative;
+          position: absolute;
+          width: 100%;
           top: 50%;
           #transform-translateY(-50%);
           h1{
@@ -104,6 +111,7 @@
   }
   //banner左右控制样式
   .left,.right{
+    margin: 70px 0;
     opacity: 0;
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
@@ -120,6 +128,7 @@
   padding-top: 60px;
   text-align: center;
   opacity: 0;
+  #ft-color(white);
   #wedding-anim(wedding_header);
   img{
     height: 100px;
@@ -227,6 +236,7 @@
         -moz-transition: all 1s;
         -o-transition: all 1s;
         transition: all 1s;
+        #ft-color(white);
         #radius(10px);
         &:hover {
           #bg-color(dark);

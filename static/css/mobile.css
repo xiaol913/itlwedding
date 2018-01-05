@@ -26,7 +26,7 @@
 }
 @media screen and (max-width: 767px) {
   #page-content-wrapper {
-    margin: 0 10px;
+    margin: 0;
   }
   .about-content h1 {
     font-size: 18px;
@@ -46,22 +46,8 @@
     background-image: url("../imgs/logo-right.png");
     width: 100%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 50%;
     background-position-x: center;
-  }
-  .navbar-header #talk {
-    width: 52px;
-    height: 30px;
-    position: absolute;
-    background-color: #ddd;
-    top: 15px;
-    left: 300px;
-    border-radius: 10px;
-    line-height: 30px;
-    color: #fbfbfb;
-    -webkit-animation: click_me 1s linear 5 2s;
-    -o-animation: click_me 1s linear 5 2s;
-    animation: click_me 1s linear 5 2s;
   }
   .st-nav-bar {
     height: auto;
@@ -69,23 +55,33 @@
   .container > .navbar-collapse {
     margin: 0;
   }
+  .navbar-toggle {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    background-color: #fff;
+  }
   .nav-menu {
     width: 100%;
-    padding: 0;
+    padding: 0 30px;
     margin: 0;
     overflow: hidden;
     z-index: 99;
-    background-color: #fff;
+    background-color: #141618;
+    border-bottom: 1px solid white;
+  }
+  .nav-menu .nav-pills > li {
+    font-size: 10px;
   }
   .carousel.fade {
-    padding: 0;
-    top: 40%;
+    padding: 10px 0 0 0;
   }
   .carousel.fade .carousel-inner {
     overflow: inherit;
   }
-  .carousel.fade .carousel-inner .item .carousel-caption .banner_label {
-    height: 100%;
+  .carousel.fade .carousel-inner .item {
+    background-size: auto 100%;
   }
   .carousel.fade .carousel-inner .item .carousel-caption .banner_label h1 {
     width: 100%;
@@ -100,6 +96,7 @@
     text-align: center;
   }
   .scroll-header {
+    margin: 0 10px;
     padding-top: 0;
   }
   .scroll-header label {
@@ -108,7 +105,7 @@
   }
   .scroll-header h1 {
     font-size: 22px;
-    color: #575757;
+    color: #fbfbfb;
   }
   .scroll-header h4 {
     font-size: 14px;
@@ -165,14 +162,23 @@
   .scroll-bar {
     display: none;
   }
+  .img-group {
+    padding: 0 10px 10px;
+    background-color: #141618;
+  }
   .img-group img {
     margin-top: 10px;
   }
   .img-group .content-item {
+    margin: 5px 0;
+    padding: 5px 0;
+    border: solid 1px white;
+    border-radius: 10px;
     background: no-repeat;
     background-size: 100%;
   }
   .img-group .content-item .words {
+    color: #fbfbfb;
     text-align: center;
   }
   .img-group .content-item .words h3 {
@@ -180,5 +186,9 @@
   }
   .img-group .content-item .words p {
     font-size: 10px;
+  }
+  .img-group .content-item .item-btn {
+    text-align: center;
+    margin-top: 5px;
   }
 }

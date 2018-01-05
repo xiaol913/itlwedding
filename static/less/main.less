@@ -17,6 +17,7 @@ a{
 }
 /* wrapper区域 */
 #wrapper{
+  #bg-color(black);
   height: 100%;
   padding-left: 0;
   -moz-transition: all 0.5s ease;
@@ -61,7 +62,7 @@ a{
   //配合父块overflow:hidden 以及父块宽度小于子块的方式来隐藏滚动条但是依然可以滚动
   overflow-x: hidden;
   overflow-y: auto;
-  #bg-color(ddd);
+  #bg-color(black);
   //logo
   .sidebar-brand{
     padding-top: 10px;
@@ -95,11 +96,11 @@ a{
     }
     &:before{
       left: 50%;
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
     }
     &:after{
       right: 50%;
-      background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, #ddd 90%);
     }
     &:nth-child(1),
     &:nth-child(10),
@@ -127,7 +128,7 @@ a{
       background-color: transparent;
     }
     a {
-      #ft-color(black);
+      #ft-color(white);
       z-index: 2;
       display: block;
       padding: 10px 15px;
@@ -138,7 +139,7 @@ a{
   li a:active,
   li a:focus{
     background-color: transparent;
-    #ft-color(ppl);
+    #ft-color(white);
     text-decoration: none;
   }
   li a:hover{
@@ -150,9 +151,12 @@ a{
   li:nth-child(10){
     padding: 0 15px;
     margin: 15px 0;
+    p{
+      #ft-color(white);
+    }
     a:hover,
     &.open a:hover{
-      #ft-color(ppl);
+      #ft-color(white);
     }
   }
   //二维码区
@@ -177,7 +181,7 @@ a{
     }
     a:hover,
     &.open a:hover{
-      #ft-color(black);
+      #ft-color(white);
     }
   }
 }

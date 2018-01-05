@@ -9,7 +9,6 @@
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <a class="navbar-brand" href="#"></a>
-            <span id="talk" class="talk">点我</span>
         </button>
     </div>
     <!-- nav bar -->
@@ -58,10 +57,12 @@
                     {% else %}
                     <p>{{ video.video_info }}</p>
                     {% endif %}
-                    <a class="btn btn-default" href="{% url 'video_detail' video.id %}">More</a>
                 </div>
                 <div class="item-img">
                     <img src="{{ video.front_img }}" width="100%">
+                </div>
+                <div class="item-btn">
+                    <a class="btn btn-default" href="{% url 'video_detail' video.id %}">More</a>
                 </div>
             </div>
             {% endfor %}
