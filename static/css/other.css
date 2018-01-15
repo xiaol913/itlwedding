@@ -19,7 +19,11 @@
   height: 100%;
 }
 #page-content-wrapper .container .about .about-content {
+  color: white;
   padding: 10px 10px;
+}
+#page-content-wrapper .container .about .about-content .panel-body {
+  color: black;
 }
 .the-foot {
   display: none;
