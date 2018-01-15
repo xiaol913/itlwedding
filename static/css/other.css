@@ -21,3 +21,9 @@
 #page-content-wrapper .container .about .about-content {
   padding: 10px 10px;
 }
+.the-foot {
+  display: none;
+}
+.sec-bar {
+  display: none;
+}
