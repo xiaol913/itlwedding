@@ -7,6 +7,16 @@
     <script src="{% static 'js/know.js' %}"></script>
 {% endblock %}
 {% block container %}
+    <!-- second bar -->
+    <div class="sec-bar">
+        <img src="{% static 'imgs/know-top.jpg' %}" style="width: 100%">
+        <div class="row sec-menu">
+            <div class="sec col-xs-6"><a href="{% url 'index' %}">首页</a></div>
+            <div class="sec col-xs-6"><a href="{% url 'wedding' %}">海外婚礼</a></div>
+            <div class="sec col-xs-6"><a href="{% url 'photo' %}">环球旅拍</a></div>
+            <div class="sec col-xs-6"><a href="{% url 'enjoy' %}">客片欣赏</a></div>
+        </div>
+    </div>
     <!-- scroll content -->
     <div class="about">
 {#        <div class="about-bg-img">#}

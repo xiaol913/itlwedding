@@ -21,6 +21,13 @@
             <li role="presentation" class="st-bar" id="back"><a href="{% url 'enjoy' %}">返回</a></li>
         </ul>
     </nav>
+    <!-- second bar -->
+    <div class="sec-bar">
+        <img src="{% static 'imgs/enjoy-top.jpg' %}" style="width: 100%">
+        <div class="row sec-menu">
+            <div class="sec col-xs-12"><a href="{% url 'enjoy' %}">返回</a></div>
+        </div>
+    </div>
     <!-- scroll content -->
     <!-- 头部 -->
     <header class="scroll-header">
@@ -53,6 +60,46 @@
     {% for img in images %}
         <img src="{{ img.img }}" width="100%">
     {% endfor %}
+    </div>
+    <!-- 页脚 -->
+    <div class="the-foot">
+        <div class="foot-top">
+            <img src="{% static 'imgs/foot-top.jpg' %}" style="width: 100%">
+        </div>
+        <ul class="m-ftu">
+            <li>
+                <a href="#" target="_blank">
+                    <img src="{% static 'imgs/foot-1-1.jpg' %}" width="100%">
+                    <div class="d1">
+                        <span class="s1">2017.9 wedding in edinburgh  爱丁堡婚礼</span><span class="s2"></span>
+                        <span class="s3"></span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img src="{% static 'imgs/foot-2-1.jpg' %}" width="100%">
+                    <div class="d1">
+                        <span class="s1">2017.9 wedding in edinburgh  爱丁堡婚礼</span><span class="s2"></span>
+                        <span class="s3"></span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img src="{% static 'imgs/foot-3-1.jpg' %}" width="100%">
+                    <div class="d1">
+                        <span class="s1">2017.9 wedding in edinburgh  爱丁堡婚礼</span><span class="s2"></span>
+                        <span class="s3"></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="foot-bot">
+            <img src="{% static 'imgs/foot-bot.jpg' %}" style="width: 100%">
+            <p class="p1">蜀ICP备17000088号
+<a href="" target="_blank">成都爱塔罗文化传媒有限公司</a>版权所有<br><br><br><br><br><br></p>
+        </div>
     </div>
 {% endblock %}
 {% block script %}

@@ -4,6 +4,16 @@
     <link rel="stylesheet" href="{% static 'css/other.css' %}">
 {% endblock %}
 {% block container %}
+    <!-- second bar -->
+    <div class="sec-bar">
+        <img src="{% static 'imgs/contact-top.jpg' %}" style="width: 100%">
+        <div class="row sec-menu">
+            <div class="sec col-xs-6"><a href="{% url 'index' %}">首页</a></div>
+            <div class="sec col-xs-6"><a href="{% url 'wedding' %}">海外婚礼</a></div>
+            <div class="sec col-xs-6"><a href="{% url 'photo' %}">环球旅拍</a></div>
+            <div class="sec col-xs-6"><a href="{% url 'enjoy' %}">客片欣赏</a></div>
+        </div>
+    </div>
     <!-- scroll content -->
     <div class="about">
 {#        <div class="about-bg-img">#}
@@ -15,5 +25,45 @@
                 {{ contact.desc }}
             {% endautoescape %}
         </article>
+    </div>
+    <!-- 页脚 -->
+    <div class="the-foot">
+        <div class="foot-top">
+            <img src="{% static 'imgs/foot-top.jpg' %}" style="width: 100%">
+        </div>
+        <ul class="m-ftu">
+            <li>
+                <a href="#" target="_blank">
+                    <img src="{% static 'imgs/foot-1-1.jpg' %}" width="100%">
+                    <div class="d1">
+                        <span class="s1">2017.9 wedding in edinburgh  爱丁堡婚礼</span><span class="s2"></span>
+                        <span class="s3"></span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img src="{% static 'imgs/foot-2-1.jpg' %}" width="100%">
+                    <div class="d1">
+                        <span class="s1">2017.9 wedding in edinburgh  爱丁堡婚礼</span><span class="s2"></span>
+                        <span class="s3"></span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank">
+                    <img src="{% static 'imgs/foot-3-1.jpg' %}" width="100%">
+                    <div class="d1">
+                        <span class="s1">2017.9 wedding in edinburgh  爱丁堡婚礼</span><span class="s2"></span>
+                        <span class="s3"></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="foot-bot">
+            <img src="{% static 'imgs/foot-bot.jpg' %}" style="width: 100%">
+            <p class="p1">蜀ICP备17000088号
+<a href="" target="_blank">成都爱塔罗文化传媒有限公司</a>版权所有<br><br><br><br><br><br></p>
+        </div>
     </div>
 {% endblock %}
