@@ -2250,3 +2250,1281 @@ your server socket listen backlog is limited to 100 connections
 your mercy for graceful operations on workers is 60 seconds
 mapped 802120 bytes (783 KB) for 10 cores
 *** Operational MODE: preforking ***
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 19:22:16 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:19:17
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 476631995de0
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x562a9ef348e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 6 seconds on interpreter 0x562a9ef348e0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 9|app: 0|req: 1/1] 118.113.209.186 () {40 vars in 692 bytes} [Tue Jun 12 19:23:08 2018] GET / => generated 6840 bytes in 780 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/2] 118.113.209.186 () {44 vars in 745 bytes} [Tue Jun 12 19:23:14 2018] GET / => generated 6840 bytes in 262 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 1/3] 118.113.209.186 () {42 vars in 745 bytes} [Tue Jun 12 19:23:17 2018] GET /wedding/ => generated 15798 bytes in 357 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/4] 61.151.218.119 () {36 vars in 535 bytes} [Tue Jun 12 19:24:08 2018] GET / => generated 6840 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 2/5] 101.226.86.156 () {38 vars in 587 bytes} [Tue Jun 12 19:24:17 2018] GET /wedding => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 114 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 1/6] 118.113.209.186 () {40 vars in 692 bytes} [Tue Jun 12 19:25:31 2018] GET / => generated 6840 bytes in 354 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 3/7] 118.113.209.186 () {42 vars in 745 bytes} [Tue Jun 12 19:25:33 2018] GET /wedding/ => generated 15798 bytes in 46 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 3/8] 118.113.209.186 () {42 vars in 772 bytes} [Tue Jun 12 19:25:35 2018] GET /wedding/?area_id=2 => generated 12500 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 4/9] 118.113.209.186 () {42 vars in 782 bytes} [Tue Jun 12 19:25:37 2018] GET /wedding/?area_id=3 => generated 9021 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 4/10] 118.113.209.186 () {42 vars in 763 bytes} [Tue Jun 12 19:25:40 2018] GET /wedding/ => generated 15798 bytes in 41 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 5/11] 118.113.209.186 () {40 vars in 706 bytes} [Tue Jun 12 19:25:44 2018] GET /xadmin/ => generated 4191 bytes in 269 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 5/12] 118.113.209.186 () {42 vars in 736 bytes} [Tue Jun 12 19:25:44 2018] GET /xadmin/jsi18n/ => generated 4198 bytes in 133 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 6/13] 118.113.209.186 () {42 vars in 766 bytes} [Tue Jun 12 19:25:45 2018] GET /favicon.ico => generated 85 bytes in 14 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 2/14] 118.113.209.186 () {46 vars in 848 bytes} [Tue Jun 12 19:25:49 2018] GET /xadmin/ => generated 4191 bytes in 113 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 7/15] 118.113.209.186 () {46 vars in 789 bytes} [Tue Jun 12 19:25:49 2018] GET /xadmin/jsi18n/ => generated 4198 bytes in 10 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 6/16] 118.113.209.186 () {46 vars in 819 bytes} [Tue Jun 12 19:25:49 2018] GET /favicon.ico => generated 85 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 3/17] 118.113.209.186 () {52 vars in 1022 bytes} [Tue Jun 12 19:25:55 2018] POST /xadmin/ => generated 4428 bytes in 167 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 8/18] 118.113.209.186 () {42 vars in 736 bytes} [Tue Jun 12 19:25:56 2018] GET /xadmin/jsi18n/ => generated 4198 bytes in 11 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 7/19] 118.113.209.186 () {52 vars in 1022 bytes} [Tue Jun 12 19:25:59 2018] POST /xadmin/ => generated 4428 bytes in 44 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 9/20] 118.113.209.186 () {42 vars in 736 bytes} [Tue Jun 12 19:25:59 2018] GET /xadmin/jsi18n/ => generated 4198 bytes in 8 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 8/21] 118.113.209.186 () {52 vars in 1022 bytes} [Tue Jun 12 19:26:04 2018] POST /xadmin/ => generated 4428 bytes in 48 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 10/22] 118.113.209.186 () {42 vars in 736 bytes} [Tue Jun 12 19:26:04 2018] GET /xadmin/jsi18n/ => generated 4198 bytes in 8 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 9/23] 118.113.209.186 () {52 vars in 1022 bytes} [Tue Jun 12 19:26:06 2018] POST /xadmin/ => generated 0 bytes in 223 msecs (HTTP/1.1 302) 9 headers in 532 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 11/24] 118.113.209.186 () {46 vars in 914 bytes} [Tue Jun 12 19:26:07 2018] GET /xadmin/ => generated 18099 bytes in 204 msecs (HTTP/1.1 200) 7 headers in 359 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 10/25] 118.113.209.186 () {42 vars in 780 bytes} [Tue Jun 12 19:26:07 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 26 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 12/26] 118.113.209.186 () {48 vars in 936 bytes} [Tue Jun 12 19:26:09 2018] GET /xadmin/ => generated 18099 bytes in 29 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 11/27] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:26:09 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 13/28] 118.113.209.186 () {46 vars in 863 bytes} [Tue Jun 12 19:26:09 2018] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 10|app: 0|req: 1/29] 118.113.209.186 () {48 vars in 936 bytes} [Tue Jun 12 19:26:10 2018] GET /xadmin/ => generated 18099 bytes in 395 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 14/30] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:26:10 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 12/31] 118.113.209.186 () {46 vars in 863 bytes} [Tue Jun 12 19:26:11 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 4/32] 61.151.226.143 () {38 vars in 630 bytes} [Tue Jun 12 19:26:35 2018] GET /wedding/?area_id=2 => generated 12500 bytes in 71 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 15/33] 101.227.143.150 () {38 vars in 641 bytes} [Tue Jun 12 19:26:37 2018] GET /wedding/?area_id=3 => generated 9021 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 13/34] 101.227.131.220 () {38 vars in 650 bytes} [Tue Jun 12 19:26:44 2018] GET /xadmin/jsi18n => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 120 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 5/35] 61.151.226.64 () {36 vars in 626 bytes} [Tue Jun 12 19:26:44 2018] GET /xadmin => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 113 bytes (1 switches on core 0)
+[pid: 13|app: 0|req: 1/36] 180.163.28.123 () {34 vars in 518 bytes} [Tue Jun 12 19:29:43 2018] GET /xadmin => generated 0 bytes in 649 msecs (HTTP/1.1 301) 3 headers in 113 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 16/37] 118.113.209.186 () {46 vars in 914 bytes} [Tue Jun 12 19:34:39 2018] GET /xadmin/ => generated 18099 bytes in 691 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 14/38] 118.113.209.186 () {42 vars in 780 bytes} [Tue Jun 12 19:34:39 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 49 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 17/39] 118.113.209.186 () {46 vars in 914 bytes} [Tue Jun 12 19:39:59 2018] GET /xadmin/ => generated 18099 bytes in 1699 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 14|app: 0|req: 1/40] 118.113.209.186 () {42 vars in 780 bytes} [Tue Jun 12 19:40:00 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 4564 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 18/41] 118.113.209.186 () {48 vars in 936 bytes} [Tue Jun 12 19:40:07 2018] GET /xadmin/ => generated 18099 bytes in 38 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 15/42] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:40:07 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 5 seconds
+worker 2 buried after 5 seconds
+worker 3 buried after 5 seconds
+worker 4 buried after 5 seconds
+worker 5 buried after 5 seconds
+worker 6 buried after 5 seconds
+worker 7 buried after 5 seconds
+worker 8 buried after 5 seconds
+worker 9 buried after 5 seconds
+worker 10 buried after 5 seconds
+binary reloading uWSGI...
+chdir() to /= /itlwedding
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 19:41:12 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:19:17
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 476631995de0
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55664d4167d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 19:46:22 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: e6296f454173
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5651c46308e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x5651c46308e0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 10|app: 0|req: 1/1] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 19:46:26 2018] GET / => generated 27 bytes in 770 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/2] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 19:46:29 2018] GET / => generated 27 bytes in 500 msecs (HTTP/1.1 500) 4 headers in 126 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 1/3] 118.113.209.186 () {46 vars in 878 bytes} [Tue Jun 12 19:46:32 2018] GET / => generated 6840 bytes in 298 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/4] 118.113.209.186 () {44 vars in 878 bytes} [Tue Jun 12 19:46:42 2018] GET /wedding/ => generated 15798 bytes in 165 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 2/5] 118.113.209.186 () {48 vars in 931 bytes} [Tue Jun 12 19:46:44 2018] GET /wedding/ => generated 15798 bytes in 37 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 3/6] 118.113.209.186 () {42 vars in 839 bytes} [Tue Jun 12 19:46:59 2018] GET /xadmin/ => generated 18099 bytes in 287 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 3/7] 118.113.209.186 () {42 vars in 780 bytes} [Tue Jun 12 19:47:00 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 27 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 4/8] 118.113.209.186 () {44 vars in 870 bytes} [Tue Jun 12 19:47:43 2018] GET /xadmin/ => generated 18099 bytes in 24 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 4/9] 118.113.209.186 () {42 vars in 780 bytes} [Tue Jun 12 19:47:43 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 64 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 5/10] 118.113.209.186 () {46 vars in 892 bytes} [Tue Jun 12 19:47:44 2018] GET /xadmin/ => generated 18099 bytes in 23 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 5/11] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:47:44 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 1/12] 118.113.209.186 () {46 vars in 892 bytes} [Tue Jun 12 19:47:45 2018] GET /xadmin/ => generated 18099 bytes in 670 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 6/13] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:47:46 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 6/14] 118.113.209.186 () {46 vars in 892 bytes} [Tue Jun 12 19:47:48 2018] GET /xadmin/ => generated 18099 bytes in 146 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 2/15] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:47:48 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 7/16] 118.113.209.186 () {46 vars in 892 bytes} [Tue Jun 12 19:47:50 2018] GET /xadmin/ => generated 18099 bytes in 26 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 7/17] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:47:50 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 8/18] 118.113.209.186 () {42 vars in 825 bytes} [Tue Jun 12 19:48:05 2018] GET / => generated 6840 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 8/19] 118.113.209.186 () {42 vars in 839 bytes} [Tue Jun 12 19:48:28 2018] GET /xadmin/ => generated 18099 bytes in 31 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 9/20] 118.113.209.186 () {42 vars in 780 bytes} [Tue Jun 12 19:48:29 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 4 seconds
+worker 2 buried after 4 seconds
+worker 3 buried after 4 seconds
+worker 4 buried after 4 seconds
+worker 5 buried after 4 seconds
+worker 6 buried after 4 seconds
+worker 7 buried after 4 seconds
+worker 8 buried after 4 seconds
+worker 9 buried after 4 seconds
+worker 10 buried after 4 seconds
+binary reloading uWSGI...
+chdir() to /= /itlwedding
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 19:49:09 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: e6296f454173
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x559d5e7b07d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 5 seconds on interpreter 0x559d5e7b07d0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 32, cores: 1)
+spawned uWSGI worker 2 (pid: 33, cores: 1)
+spawned uWSGI worker 3 (pid: 34, cores: 1)
+spawned uWSGI worker 4 (pid: 35, cores: 1)
+spawned uWSGI worker 5 (pid: 36, cores: 1)
+spawned uWSGI worker 6 (pid: 37, cores: 1)
+spawned uWSGI worker 7 (pid: 38, cores: 1)
+spawned uWSGI worker 8 (pid: 39, cores: 1)
+spawned uWSGI worker 9 (pid: 40, cores: 1)
+spawned uWSGI worker 10 (pid: 41, cores: 1)
+Tue Jun 12 19:49:14 2018 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 19:49:14 2018 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 19:49:14 2018 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 19:49:14 2018 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 19:49:14 2018 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 19:49:14 2018 - uWSGI worker 6 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 19:49:14 2018 - uWSGI worker 7 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 19:49:14 2018 - uWSGI worker 8 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 19:49:14 2018 - uWSGI worker 9 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 19:49:14 2018 - uWSGI worker 10 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 19:49:15 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: e6296f454173
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x556e26ea18e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x556e26ea18e0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 14|app: 0|req: 1/1] 118.113.209.186 () {46 vars in 887 bytes} [Tue Jun 12 19:49:18 2018] GET /favicon.ico => generated 85 bytes in 567 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/2] 118.113.209.186 () {46 vars in 892 bytes} [Tue Jun 12 19:49:19 2018] GET /xadmin/ => generated 18099 bytes in 636 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 1/3] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:49:20 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 232 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/4] 118.113.209.186 () {46 vars in 892 bytes} [Tue Jun 12 19:49:21 2018] GET /xadmin/ => generated 18099 bytes in 24 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 2/5] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:49:21 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 3/6] 118.113.209.186 () {46 vars in 892 bytes} [Tue Jun 12 19:49:23 2018] GET /xadmin/ => generated 18099 bytes in 28 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 3/7] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:49:23 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 4/8] 118.113.209.186 () {46 vars in 892 bytes} [Tue Jun 12 19:49:24 2018] GET /xadmin/ => generated 18099 bytes in 24 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 4/9] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:49:24 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 8 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 1/10] 118.113.209.186 () {46 vars in 892 bytes} [Tue Jun 12 19:49:26 2018] GET /xadmin/ => generated 18099 bytes in 442 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 5/11] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:49:27 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 5/12] 118.113.209.186 () {46 vars in 892 bytes} [Tue Jun 12 19:49:28 2018] GET /xadmin/ => generated 18099 bytes in 202 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 6/13] 118.113.209.186 () {46 vars in 833 bytes} [Tue Jun 12 19:49:28 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 6/14] 118.113.209.186 () {42 vars in 825 bytes} [Tue Jun 12 19:49:49 2018] GET / => generated 6840 bytes in 39 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 7/15] 118.113.209.186 () {42 vars in 831 bytes} [Tue Jun 12 19:50:33 2018] GET /api => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 8|app: 0|req: 1/16] 118.113.209.186 () {42 vars in 833 bytes} [Tue Jun 12 19:50:33 2018] GET /api/ => generated 6886 bytes in 476 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 8/17] 118.113.209.186 () {44 vars in 864 bytes} [Tue Jun 12 19:53:00 2018] GET /api/ => generated 6886 bytes in 37 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 7/18] 118.113.209.186 () {46 vars in 886 bytes} [Tue Jun 12 19:53:03 2018] GET /api/ => generated 6886 bytes in 44 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 9/19] 118.113.209.186 () {46 vars in 886 bytes} [Tue Jun 12 19:53:04 2018] GET /api/ => generated 6886 bytes in 14 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 10/20] 180.163.28.123 () {34 vars in 512 bytes} [Tue Jun 12 19:58:14 2018] GET /api => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 8/21] 118.113.209.186 () {44 vars in 864 bytes} [Tue Jun 12 19:58:16 2018] GET /api/ => generated 6886 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 11/22] 118.113.209.186 () {46 vars in 886 bytes} [Tue Jun 12 19:58:17 2018] GET /api/ => generated 6886 bytes in 16 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 9/23] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 19:58:19 2018] GET /favicon.ico => generated 85 bytes in 9 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 2/24] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 19:58:19 2018] GET /favicon.ico => generated 85 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 14|app: 0|req: 2/25] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 19:58:19 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 6 seconds
+worker 2 buried after 6 seconds
+worker 3 buried after 6 seconds
+worker 4 buried after 6 seconds
+worker 5 buried after 6 seconds
+worker 6 buried after 6 seconds
+worker 7 buried after 6 seconds
+worker 8 buried after 6 seconds
+worker 9 buried after 6 seconds
+worker 10 buried after 6 seconds
+binary reloading uWSGI...
+chdir() to /= /itlwedding
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 20:09:10 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: e6296f454173
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x557ebd46d7d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 20:09:15 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: e6296f454173
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5575346af8e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 9 seconds on interpreter 0x5575346af8e0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 9|app: 0|req: 1/1] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 20:09:24 2018] GET / => generated 6840 bytes in 1358 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/2] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 20:09:26 2018] GET / => generated 6840 bytes in 268 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 1/3] 118.113.209.186 () {44 vars in 864 bytes} [Tue Jun 12 20:09:27 2018] GET /api/ => generated 6886 bytes in 542 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/4] 118.113.209.186 () {44 vars in 864 bytes} [Tue Jun 12 20:09:27 2018] GET /api/ => generated 6886 bytes in 44 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 2/5] 118.113.209.186 () {44 vars in 864 bytes} [Tue Jun 12 20:09:28 2018] GET /api/ => generated 6886 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 3/6] 118.113.209.186 () {46 vars in 886 bytes} [Tue Jun 12 20:09:33 2018] GET /api/ => generated 6886 bytes in 16 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 3/7] 118.113.209.186 () {46 vars in 886 bytes} [Tue Jun 12 20:09:33 2018] GET /api/ => generated 6886 bytes in 18 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 4/8] 118.113.209.186 () {46 vars in 886 bytes} [Tue Jun 12 20:09:34 2018] GET /api/ => generated 6886 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 4/9] 118.113.209.186 () {46 vars in 886 bytes} [Tue Jun 12 20:09:34 2018] GET /api/ => generated 6886 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 5/10] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 20:09:39 2018] GET /favicon.ico => generated 85 bytes in 52 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 1/11] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 20:09:40 2018] GET /favicon.ico => generated 85 bytes in 203 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 4 seconds
+worker 2 buried after 4 seconds
+worker 3 buried after 4 seconds
+worker 4 buried after 4 seconds
+worker 5 buried after 4 seconds
+worker 6 buried after 4 seconds
+worker 7 buried after 4 seconds
+worker 8 buried after 4 seconds
+worker 9 buried after 4 seconds
+worker 10 buried after 4 seconds
+binary reloading uWSGI...
+chdir() to /= /itlwedding
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 20:15:15 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: e6296f454173
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x561b901a07d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x561b901a07d0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 26, cores: 1)
+spawned uWSGI worker 2 (pid: 27, cores: 1)
+spawned uWSGI worker 3 (pid: 28, cores: 1)
+spawned uWSGI worker 4 (pid: 29, cores: 1)
+spawned uWSGI worker 5 (pid: 30, cores: 1)
+spawned uWSGI worker 6 (pid: 31, cores: 1)
+spawned uWSGI worker 7 (pid: 32, cores: 1)
+spawned uWSGI worker 8 (pid: 33, cores: 1)
+spawned uWSGI worker 9 (pid: 34, cores: 1)
+spawned uWSGI worker 10 (pid: 35, cores: 1)
+Tue Jun 12 20:15:20 2018 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:15:20 2018 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:15:20 2018 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:15:20 2018 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:15:20 2018 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:15:20 2018 - uWSGI worker 6 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:15:20 2018 - uWSGI worker 7 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:15:20 2018 - uWSGI worker 8 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 20:16:05 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 8bc755e9676a
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5562e5e2d8e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x5562e5e2d8e0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 13|app: 0|req: 1/1] 118.113.209.186 () {44 vars in 864 bytes} [Tue Jun 12 20:16:22 2018] GET /api/ => generated 6886 bytes in 932 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/2] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 20:16:26 2018] GET /favicon.ico => generated 85 bytes in 192 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 1/3] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 20:16:27 2018] GET /favicon.ico => generated 85 bytes in 193 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/4] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 20:16:29 2018] GET / => generated 6840 bytes in 97 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 2/5] 118.113.209.186 () {46 vars in 878 bytes} [Tue Jun 12 20:16:31 2018] GET / => generated 6840 bytes in 75 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 6 buried after 1 seconds
+worker 1 buried after 4 seconds
+worker 2 buried after 4 seconds
+worker 3 buried after 4 seconds
+worker 4 buried after 4 seconds
+worker 5 buried after 4 seconds
+worker 7 buried after 4 seconds
+worker 8 buried after 4 seconds
+worker 9 buried after 4 seconds
+worker 10 buried after 4 seconds
+binary reloading uWSGI...
+chdir() to /= /itlwedding
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 20:19:09 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 8bc755e9676a
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x563624bbc7d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x563624bbc7d0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 21, cores: 1)
+spawned uWSGI worker 2 (pid: 22, cores: 1)
+spawned uWSGI worker 3 (pid: 23, cores: 1)
+spawned uWSGI worker 4 (pid: 24, cores: 1)
+spawned uWSGI worker 5 (pid: 25, cores: 1)
+spawned uWSGI worker 6 (pid: 26, cores: 1)
+spawned uWSGI worker 7 (pid: 27, cores: 1)
+spawned uWSGI worker 8 (pid: 28, cores: 1)
+spawned uWSGI worker 9 (pid: 29, cores: 1)
+spawned uWSGI worker 10 (pid: 30, cores: 1)
+Tue Jun 12 20:19:15 2018 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:19:15 2018 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:19:15 2018 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:19:15 2018 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:19:15 2018 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:19:15 2018 - uWSGI worker 6 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:19:15 2018 - uWSGI worker 7 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jun 12 20:19:15 2018 - uWSGI worker 8 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 20:20:20 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 6ea07b61eb72
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x560a71e2b8e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x560a71e2b8e0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 9|app: 0|req: 1/1] 118.113.209.186 () {44 vars in 864 bytes} [Tue Jun 12 20:20:23 2018] GET /api/ => generated 6886 bytes in 1247 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/2] 118.113.209.186 () {46 vars in 886 bytes} [Tue Jun 12 20:20:26 2018] GET /api/ => generated 6886 bytes in 344 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 1/3] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 20:20:29 2018] GET /favicon.ico => generated 85 bytes in 244 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/4] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 20:20:30 2018] GET / => generated 6840 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 2/5] 118.113.209.186 () {46 vars in 878 bytes} [Tue Jun 12 20:20:31 2018] GET / => generated 6840 bytes in 80 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 3/6] 118.113.209.186 () {46 vars in 878 bytes} [Tue Jun 12 20:20:32 2018] GET / => generated 6840 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 3/7] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 20:20:39 2018] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 1/8] 118.113.209.186 () {42 vars in 929 bytes} [Tue Jun 12 20:20:51 2018] GET /itlwedding/static/rest_framework/js/bootstrap.min.js => generated 126 bytes in 217 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 4/9] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 20:21:43 2018] GET / => generated 6840 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 4/10] 118.113.209.186 () {44 vars in 960 bytes} [Tue Jun 12 20:23:05 2018] GET /itlwedding/static/rest_framework/js/bootstrap.min.js => generated 126 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 101 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 1/11] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 20:23:09 2018] GET /favicon.ico => generated 85 bytes in 240 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 5/12] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 20:23:10 2018] GET /favicon.ico => generated 85 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 5 seconds
+worker 2 buried after 5 seconds
+worker 3 buried after 5 seconds
+worker 4 buried after 5 seconds
+worker 5 buried after 5 seconds
+worker 6 buried after 5 seconds
+worker 7 buried after 5 seconds
+worker 8 buried after 5 seconds
+worker 9 buried after 5 seconds
+worker 10 buried after 5 seconds
+binary reloading uWSGI...
+chdir() to /= /itlwedding
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 20:24:51 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 6ea07b61eb72
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5587bee137d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 20:26:54 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: ce921693d872
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x565360e8d8e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 8 seconds on interpreter 0x565360e8d8e0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 12|app: 0|req: 1/1] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 20:27:02 2018] GET / => generated 6840 bytes in 1511 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/2] 118.113.209.186 () {44 vars in 864 bytes} [Tue Jun 12 20:27:10 2018] GET /api/ => generated 6886 bytes in 494 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 1/3] 118.113.209.186 () {46 vars in 886 bytes} [Tue Jun 12 20:27:13 2018] GET /api/ => generated 6886 bytes in 282 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/4] 118.113.209.186 () {46 vars in 886 bytes} [Tue Jun 12 20:27:14 2018] GET /api/ => generated 6886 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 2/5] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 20:27:16 2018] GET /favicon.ico => generated 85 bytes in 37 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 1/6] 118.113.209.186 () {46 vars in 897 bytes} [Tue Jun 12 20:27:16 2018] GET /favicon.ico => generated 85 bytes in 189 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 3/7] 66.249.64.15 () {36 vars in 518 bytes} [Tue Jun 12 21:56:17 2018] GET /robots.txt => generated 84 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 3/8] 66.249.64.14 () {38 vars in 576 bytes} [Tue Jun 12 21:56:17 2018] GET / => generated 6840 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 2/9] 66.249.64.14 () {38 vars in 485 bytes} [Tue Jun 12 21:56:23 2018] GET /favicon.ico => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 4/10] 66.249.64.14 () {38 vars in 702 bytes} [Tue Jun 12 22:01:06 2018] GET / => generated 6840 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 5/11] 163.177.90.152 () {38 vars in 645 bytes} [Tue Jun 12 22:04:48 2018] GET /xadmin/jsi18n => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 120 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 1/12] 163.177.90.152 () {40 vars in 697 bytes} [Tue Jun 12 22:04:48 2018] GET /xadmin/jsi18n/ => generated 4198 bytes in 554 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 6/13] 101.91.62.11 () {38 vars in 656 bytes} [Tue Jun 12 22:09:14 2018] GET /wedding/?area_id%3D3 => generated 15798 bytes in 497 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 7/14] 66.249.69.155 () {38 vars in 589 bytes} [Tue Jun 12 23:28:00 2018] GET /about/ => generated 6943 bytes in 109 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 5 seconds
+worker 2 buried after 5 seconds
+worker 3 buried after 5 seconds
+worker 4 buried after 5 seconds
+worker 5 buried after 5 seconds
+worker 6 buried after 5 seconds
+worker 7 buried after 5 seconds
+worker 8 buried after 5 seconds
+worker 9 buried after 5 seconds
+worker 10 buried after 5 seconds
+binary reloading uWSGI...
+chdir() to /= /itlwedding
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 23:28:19 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: ce921693d872
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55a04a8987d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 23:28:43 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 6c29834cbc27
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5654d22d88e0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 8 seconds on interpreter 0x5654d22d88e0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 8|app: 0|req: 1/1] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 23:28:51 2018] GET / => generated 6840 bytes in 1837 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 11|app: 0|req: 1/2] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 23:28:51 2018] GET / => generated 6840 bytes in 1839 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/3] 118.113.209.186 () {46 vars in 856 bytes} [Tue Jun 12 23:28:53 2018] GET /favicon.ico => generated 85 bytes in 317 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 1/4] 118.113.209.186 () {42 vars in 839 bytes} [Tue Jun 12 23:29:00 2018] GET /xadmin/ => generated 18099 bytes in 607 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/5] 118.113.209.186 () {42 vars in 780 bytes} [Tue Jun 12 23:29:01 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 75 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 2/6] 61.151.226.61 () {36 vars in 535 bytes} [Tue Jun 12 23:29:46 2018] GET / => generated 6840 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 5 seconds
+worker 2 buried after 5 seconds
+worker 3 buried after 5 seconds
+worker 4 buried after 5 seconds
+worker 5 buried after 5 seconds
+worker 6 buried after 5 seconds
+worker 7 buried after 5 seconds
+worker 8 buried after 5 seconds
+worker 9 buried after 5 seconds
+worker 10 buried after 5 seconds
+binary reloading uWSGI...
+chdir() to /= /itlwedding
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 23:57:18 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 6c29834cbc27
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x56281d6617d0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+*** Starting uWSGI 2.0.17 (64bit) on [Tue Jun 12 23:57:39 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 64ce7d61499c
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x563b1135d310
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 9 seconds on interpreter 0x563b1135d310 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 10|app: 0|req: 1/1] 118.113.209.186 () {44 vars in 870 bytes} [Tue Jun 12 23:57:48 2018] GET /xadmin/ => generated 18099 bytes in 2205 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/2] 118.113.209.186 () {42 vars in 780 bytes} [Tue Jun 12 23:57:51 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 246 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 1/3] 118.113.209.186 () {42 vars in 825 bytes} [Tue Jun 12 23:58:57 2018] GET / => generated 6840 bytes in 345 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/4] 118.113.209.186 () {46 vars in 878 bytes} [Tue Jun 12 23:58:59 2018] GET / => generated 6840 bytes in 74 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 2/5] 118.113.209.186 () {46 vars in 856 bytes} [Tue Jun 12 23:58:59 2018] GET /favicon.ico => generated 85 bytes in 57 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 3/6] 118.113.209.186 () {46 vars in 878 bytes} [Tue Jun 12 23:58:59 2018] GET / => generated 6840 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 3/7] 118.113.209.186 () {46 vars in 856 bytes} [Tue Jun 12 23:59:00 2018] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 1/8] 118.113.209.186 () {46 vars in 878 bytes} [Tue Jun 12 23:59:00 2018] GET / => generated 6840 bytes in 296 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 4/9] 118.113.209.186 () {46 vars in 856 bytes} [Tue Jun 12 23:59:01 2018] GET /favicon.ico => generated 85 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 4/10] 118.113.209.186 () {46 vars in 878 bytes} [Tue Jun 12 23:59:01 2018] GET / => generated 6840 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 5/11] 118.113.209.186 () {46 vars in 856 bytes} [Tue Jun 12 23:59:01 2018] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 12|app: 0|req: 1/12] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 23:59:46 2018] GET / => generated 6840 bytes in 313 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 6/13] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 23:59:50 2018] GET / => generated 6840 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 5/14] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 23:59:56 2018] GET / => generated 6840 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 7/15] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 23:59:57 2018] GET / => generated 6840 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 6/16] 118.113.209.186 () {44 vars in 856 bytes} [Tue Jun 12 23:59:59 2018] GET / => generated 6840 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+...brutally killing workers...
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Jun 13 00:11:31 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 77d45660ab0f
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x558016b6d310
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x558016b6d310 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 11|app: 0|req: 1/1] 118.113.209.186 () {44 vars in 856 bytes} [Wed Jun 13 00:11:38 2018] GET / => generated 6840 bytes in 716 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/2] 118.113.209.186 () {46 vars in 878 bytes} [Wed Jun 13 00:11:41 2018] GET / => generated 6840 bytes in 285 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 1/3] 118.113.209.186 () {46 vars in 856 bytes} [Wed Jun 13 00:11:41 2018] GET /favicon.ico => generated 85 bytes in 255 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 4 seconds
+worker 2 buried after 4 seconds
+worker 3 buried after 4 seconds
+worker 4 buried after 4 seconds
+worker 5 buried after 4 seconds
+worker 6 buried after 4 seconds
+worker 7 buried after 4 seconds
+worker 8 buried after 4 seconds
+worker 9 buried after 4 seconds
+worker 10 buried after 4 seconds
+binary reloading uWSGI...
+chdir() to /= /itlwedding
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Jun 13 00:12:50 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 11:45:05
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 77d45660ab0f
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x555af94862c0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Jun 13 00:19:42 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 16:17:55
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 697af6acd34f
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /mytest
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5557e2345300
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x5557e2345300 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 9|app: 0|req: 1/1] 118.113.209.186 () {44 vars in 856 bytes} [Wed Jun 13 00:19:50 2018] GET / => generated 6840 bytes in 979 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/2] 118.113.209.186 () {44 vars in 856 bytes} [Wed Jun 13 00:23:03 2018] GET / => generated 6840 bytes in 543 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 15|app: 0|req: 1/3] 118.113.209.186 () {46 vars in 878 bytes} [Wed Jun 13 00:23:05 2018] GET / => generated 6840 bytes in 266 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/4] 118.113.209.186 () {46 vars in 856 bytes} [Wed Jun 13 00:23:05 2018] GET /favicon.ico => generated 85 bytes in 43 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 4 seconds
+worker 2 buried after 4 seconds
+worker 3 buried after 4 seconds
+worker 4 buried after 4 seconds
+worker 5 buried after 4 seconds
+worker 6 buried after 4 seconds
+worker 7 buried after 4 seconds
+worker 8 buried after 4 seconds
+worker 9 buried after 4 seconds
+worker 10 buried after 4 seconds
+binary reloading uWSGI...
+chdir() to /= /mytest
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Jun 13 00:23:29 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 16:17:55
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: 697af6acd34f
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /mytest
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55fe1631d2b0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0x55fe1631d2b0 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 52, cores: 1)
+spawned uWSGI worker 2 (pid: 53, cores: 1)
+spawned uWSGI worker 3 (pid: 54, cores: 1)
+spawned uWSGI worker 4 (pid: 55, cores: 1)
+spawned uWSGI worker 5 (pid: 56, cores: 1)
+spawned uWSGI worker 6 (pid: 57, cores: 1)
+spawned uWSGI worker 7 (pid: 58, cores: 1)
+spawned uWSGI worker 8 (pid: 59, cores: 1)
+spawned uWSGI worker 9 (pid: 60, cores: 1)
+spawned uWSGI worker 10 (pid: 61, cores: 1)
+Wed Jun 13 00:23:35 2018 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun 13 00:23:35 2018 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun 13 00:23:35 2018 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun 13 00:23:35 2018 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun 13 00:23:35 2018 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun 13 00:23:35 2018 - uWSGI worker 6 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun 13 00:23:35 2018 - uWSGI worker 7 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun 13 00:23:35 2018 - uWSGI worker 8 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Wed Jun 13 00:23:35 2018 - uWSGI worker 10 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Jun 13 00:26:34 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 16:17:55
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: d86ab33e7124
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /= /mytest
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55cfd28a5300
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55cfd28a5300 pid: 1 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 8, cores: 1)
+spawned uWSGI worker 2 (pid: 9, cores: 1)
+spawned uWSGI worker 3 (pid: 10, cores: 1)
+spawned uWSGI worker 4 (pid: 11, cores: 1)
+spawned uWSGI worker 5 (pid: 12, cores: 1)
+spawned uWSGI worker 6 (pid: 13, cores: 1)
+spawned uWSGI worker 7 (pid: 14, cores: 1)
+spawned uWSGI worker 8 (pid: 15, cores: 1)
+spawned uWSGI worker 9 (pid: 16, cores: 1)
+spawned uWSGI worker 10 (pid: 17, cores: 1)
+[pid: 14|app: 0|req: 1/1] 118.113.209.186 () {44 vars in 856 bytes} [Wed Jun 13 00:26:39 2018] GET / => generated 6840 bytes in 645 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 16|app: 0|req: 1/2] 118.113.209.186 () {42 vars in 839 bytes} [Wed Jun 13 00:26:46 2018] GET /xadmin/ => generated 18099 bytes in 480 msecs (HTTP/1.1 200) 6 headers in 228 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 1/3] 118.113.209.186 () {42 vars in 780 bytes} [Wed Jun 13 00:26:47 2018] GET /xadmin/jsi18n/ => generated 4753 bytes in 229 msecs (HTTP/1.1 200) 4 headers in 115 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 2/4] 118.113.209.186 () {46 vars in 878 bytes} [Wed Jun 13 00:28:51 2018] GET / => generated 6840 bytes in 80 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 17|app: 0|req: 3/5] 118.113.209.186 () {46 vars in 856 bytes} [Wed Jun 13 00:29:35 2018] GET /favicon.ico => generated 85 bytes in 35 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 9 buried after 1 seconds
+worker 1 buried after 4 seconds
+worker 2 buried after 4 seconds
+worker 3 buried after 4 seconds
+worker 4 buried after 4 seconds
+worker 5 buried after 4 seconds
+worker 6 buried after 4 seconds
+worker 7 buried after 4 seconds
+worker 8 buried after 4 seconds
+worker 10 buried after 4 seconds
+binary reloading uWSGI...
+chdir() to /= /mytest
+uwsgi_reload()/chdir(): No such file or directory [core/master_utils.c line 440]
+closing all non-uwsgi socket fds > 2 (max_fd = 65536)...
+found fd 3 mapped to socket 0 (:8000)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from ./conf/uwsgi.ini
+*** Starting uWSGI 2.0.17 (64bit) on [Wed Jun 13 00:31:47 2018] ***
+compiled with version: 6.3.0 20170516 on 12 June 2018 16:17:55
+os: Linux-3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017
+nodename: d86ab33e7124
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /itlwedding
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /itlwedding
+your memory page size is 4096 bytes
+detected max file descriptor number: 65536
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8000 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jun  6 2018, 19:19:24)  [GCC 6.3.0 20170516]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55e00b7242b0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***

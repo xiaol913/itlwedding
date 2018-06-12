@@ -1,36 +1,39 @@
-db:
-  image: mysql
-  container_name: itlwedding-db
-  expose:
-    - "3306"
-  ports:
-    - 3307:3306
-  command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-connect='SET NAMES utf8mb4;' --innodb-flush-log-at-trx-commit=0
-  volumes:
-    - ./db:/var/lib/mysql:rw
-  environment:
-    - MYSQL_DATABASE=itlwedding
-    - MYSQL_ROOT_PASSWORD=sd651134
+version: "3"
+services:
 
-web:
-  build: .
-  restart: always  
-  container_name: itlwedding
-  command: uwsgi -i ./conf/uwsgi.ini 
-  volumes:
-    - .:/itlwedding
-  ports:
-    - 8000:8000
-  links:
-    - db:db
+  db:
+    image: mysql
+    container_name: itlwedding-db
+    expose:
+      - "3306"
+    ports:
+      - 3307:3306
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-connect='SET NAMES utf8mb4;' --innodb-flush-log-at-trx-commit=0
+    volumes:
+      - ./db:/var/lib/mysql:rw
+    environment:
+      - MYSQL_DATABASE=itlwedding
+      - MYSQL_ROOT_PASSWORD=sd651134
 
-nginx:
-  restart: always
-  container_name: itlwedding-nginx
-  build: ./nginx
-  ports:
-    - "80:80"
-  volumes:
-    - .:/itlwedding
-  links:
-    - web:web
+  web:
+    build: .
+    restart: always  
+    container_name: itlwedding
+    command: uwsgi -i ./conf/uwsgi.ini
+    volumes:
+      - .:/itlwedding
+    ports:
+      - 8000:8000
+    links:
+      - db:db
+
+  nginx:
+    restart: always
+    container_name: itlwedding-nginx
+    build: ./nginx
+    ports:
+      - "80:80"
+    volumes:
+      - .:/itlwedding
+    links:
+      - web:web
