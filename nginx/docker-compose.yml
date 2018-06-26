@@ -3,7 +3,7 @@ services:
 
   db:
     image: mysql
-    container_name: itlwedding-db
+    container_name: db
     expose:
       - "3306"
     ports:
@@ -15,25 +15,23 @@ services:
       - MYSQL_DATABASE=itlwedding
       - MYSQL_ROOT_PASSWORD=sd651134
 
-  web:
-    build: .
-    restart: always  
+  itlwedding:
+    build: ./itlwedding
     container_name: itlwedding
     command: uwsgi -i /itlwedding/conf/uwsgi.ini
     volumes:
-      - .:/itlwedding
+      - ./itlwedding:/itlwedding
     ports:
       - 8000:8000
     links:
       - db:db
 
   nginx:
-    restart: always
-    container_name: itlwedding-nginx
+    container_name: nginx
     build: ./nginx
     ports:
       - "80:80"
     volumes:
-      - .:/itlwedding
+      - ./itlwedding:/itlwedding
     links:
-      - web:web
+      - itlwedding:itlwedding
