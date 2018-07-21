@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 SECRET_KEY = '*x8#ep+p8)67m+7gm8x3cqpbu&-4mj(6umnx4gf1x3cj+x8+ep'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'contact',
     'rest_framework',
     'django_filters',
+    'raven.contrib.django.raven_compat',
 ]
 
 MIDDLEWARE = [
@@ -148,3 +149,8 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Sentry
+RAVEN_CONFIG = {
+    'dsn': 'http://d976f308d2eb4b4bb3bc83e28623b525:d890c5bac55a4926acd4f1ed18a4705a@sentry.shawnlive.com/5',
+}
