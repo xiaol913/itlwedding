@@ -35,7 +35,11 @@ services:
     build: ./nginx
     ports:
       - "80:80"
+<<<<<<< HEAD
       - "443:443" 
+=======
+      - "443:443"
+>>>>>>> 006ff172ae77d4bc2f9d2b1cbb96d33719aa3670
     volumes:
       - ./itlwedding:/itlwedding
     links:
