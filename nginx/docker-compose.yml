@@ -14,6 +14,8 @@ services:
     environment:
       - MYSQL_DATABASE=itlwedding
       - MYSQL_ROOT_PASSWORD=sd651134
+    networks:
+      - sentry
 
   itlwedding:
     build: ./itlwedding
@@ -25,13 +27,22 @@ services:
       - 8000:8000
     links:
       - db:db
+    networks:
+      - sentry
 
   nginx:
     container_name: nginx
     build: ./nginx
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./itlwedding:/itlwedding
     links:
       - itlwedding:itlwedding
+    networks:
+      - sentry
+
+networks:
+    sentry:
+        external: true
