@@ -1,7 +1,8 @@
 FROM nginx:latest
 
-COPY server.crt /etc/nginx/
-COPY server.key /etc/nginx/
-COPY itl_nginx.conf /etc/nginx/conf.d/
-COPY sentry_nginx.conf /etc/nginx/conf.d/
+WORKDIR /etc/nginx/
+COPY ./server.crt ./
+COPY ./server.key ./
+COPY ./itl_nginx.conf ./conf.d/itl_nginx.conf
+COPY ./sentry_nginx.conf ./conf.d/sentry_nginx.conf
 RUN sed -i '/user/{s/nginx/root/}' /etc/nginx/nginx.conf
