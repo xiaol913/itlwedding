@@ -21,8 +21,8 @@ services:
   itlwedding:
     build: ./itlwedding
     container_name: itlwedding
-    command: uwsgi -i /itlwedding/conf/uwsgi.ini
     restart: always
+    command: uwsgi -i /itlwedding/conf/uwsgi.ini
     volumes:
       - ./itlwedding:/itlwedding
     ports:
