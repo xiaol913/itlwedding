@@ -20,7 +20,7 @@ x-defaults: &defaults
   environment:
     # Run `docker-compose run web config generate-secret-key`
     # to get the SENTRY_SECRET_KEY value.
-    SENTRY_SECRET_KEY: 'nd#2ro42yh&y#_!&xac32g90xvqn^qke-ziuxy31i^fo2xx)5e'
+    SENTRY_SECRET_KEY: '=umoo-_!2*mawq94apm&k5z)8p&-^l+bplu*thjepv@o*#^ck%'
     SENTRY_MEMCACHED_HOST: memcached
     SENTRY_REDIS_HOST: redis
     SENTRY_POSTGRES_HOST: postgres
@@ -34,19 +34,19 @@ services:
     restart: unless-stopped
     image: tianon/exim4
     networks:
-      - sentry
+      - shawnlive
 
   memcached:
     restart: unless-stopped
     image: memcached:1.4
     networks:
-      - sentry
-  
+      - shawnlive
+
   redis:
     restart: unless-stopped
     image: redis:3.2-alpine
     networks:
-      - sentry
+      - shawnlive
 
   postgres:
     restart: unless-stopped
@@ -54,31 +54,31 @@ services:
     volumes:
       - sentry-postgres:/var/lib/postgresql/data
     networks:
-      - sentry
+      - shawnlive
 
   web:
     <<: *defaults
     ports:
       - '9000:9000'
     networks:
-      - sentry
+      - shawnlive
 
   cron:
     <<: *defaults
     command: run cron
     networks:
-      - sentry
+      - shawnlive
 
   worker:
     <<: *defaults
     command: run worker
     networks:
-      - sentry
+      - shawnlive
+
 
 volumes:
     sentry-data:
     sentry-postgres:
-
 networks:
-    sentry:
+    shawnlive:
         external: true
