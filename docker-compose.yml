@@ -1,84 +1,50 @@
-# NOTE: This docker-compose.yml is meant to be just an example of how
-# you could accomplish this on your own. It is not intended to work in
-# all use-cases and must be adapted to fit your needs. This is merely
-# a guideline.
-
-# See docs.getsentry.com/on-premise/server/ for full
-# instructions
-
-version: '3.4'
-
-x-defaults: &defaults
-  restart: unless-stopped
-  build: .
-  depends_on:
-    - redis
-    - postgres
-    - memcached
-    - smtp
-
-  environment:
-    # Run `docker-compose run web config generate-secret-key`
-    # to get the SENTRY_SECRET_KEY value.
-    SENTRY_SECRET_KEY: '=umoo-_!2*mawq94apm&k5z)8p&-^l+bplu*thjepv@o*#^ck%'
-    SENTRY_MEMCACHED_HOST: memcached
-    SENTRY_REDIS_HOST: redis
-    SENTRY_POSTGRES_HOST: postgres
-    SENTRY_EMAIL_HOST: smtp
-  volumes:
-    - sentry-data:/var/lib/sentry/files
-
-
+version: "3"
 services:
-  smtp:
-    restart: unless-stopped
-    image: tianon/exim4
-    networks:
-      - shawnlive
 
-  memcached:
-    restart: unless-stopped
-    image: memcached:1.4
-    networks:
-      - shawnlive
-
-  redis:
-    restart: unless-stopped
-    image: redis:3.2-alpine
-    networks:
-      - shawnlive
-
-  postgres:
-    restart: unless-stopped
-    image: postgres:9.5
-    volumes:
-      - sentry-postgres:/var/lib/postgresql/data
-    networks:
-      - shawnlive
-
-  web:
-    <<: *defaults
+  db:
+    image: mysql
+    container_name: db
+    restart: always
+    expose:
+      - "3306"
     ports:
-      - '9000:9000'
+      - 3307:3306
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-connect='SET NAMES utf8mb4;' --innodb-flush-log-at-trx-commit=0
+    volumes:
+      - ./db:/var/lib/mysql:rw
+    environment:
+      - MYSQL_DATABASE=itlwedding
+      - MYSQL_ROOT_PASSWORD=sd651134
     networks:
       - shawnlive
 
-  cron:
-    <<: *defaults
-    command: run cron
+  itlwedding:
+    build: ./itlwedding
+    container_name: itlwedding
+    command: uwsgi -i /itlwedding/conf/uwsgi.ini
+    restart: always
+    volumes:
+      - ./itlwedding:/itlwedding
+    ports:
+      - 8000:8000
+    links:
+      - db:db
     networks:
       - shawnlive
 
-  worker:
-    <<: *defaults
-    command: run worker
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./itlwedding:/itlwedding
+    links:
+      - itlwedding:itlwedding
     networks:
       - shawnlive
 
-
-volumes:
-    sentry-data:
-    sentry-postgres:
 networks:
     shawnlive:
         external: true

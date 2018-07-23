@@ -152,5 +152,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Sentry
 RAVEN_CONFIG = {
-    'dsn': 'http://d976f308d2eb4b4bb3bc83e28623b525:d890c5bac55a4926acd4f1ed18a4705a@sentry.shawnlive.com/5',
+    'dsn': 'http://fa9cbc017d3c4a4ba7a985c30a7e4728:e730d36c23134b239c5298077368b038@sentry.shawnlive.com/2',
 }
