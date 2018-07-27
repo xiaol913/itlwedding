@@ -5,16 +5,16 @@ sleep 2
 
 echo '===== moving files ====='
 sleep 2
-#mv ./db ../
-#mv ./nginx ../
-#mv ./sentry ../
-#mv ./docker-compose.yml ../
+cp -r ./db ../
+cp -r ./nginx ../
+cp -r ./sentry ../
+cp ./docker-compose.yml ../
 
 echo '===== creating netword ====='
 sleep 2
-#docker network create shawnlive
+docker network create shawnlive
 cd ../sentry
-#mkdir -p ./data/{sentry,postgres}
+mkdir -p ./data/{sentry,postgres}
 
 echo '===== building sentry images(1) ====='
 sleep 2
