@@ -25,4 +25,4 @@ Quick Start
 
 7.    Start web server
 
-      ../docker-compose up -d
+      cd .. && docker-compose up -d
