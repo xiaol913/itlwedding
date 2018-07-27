@@ -15,7 +15,7 @@ docker network create shawnlive
 cd ..
 git clone https://github.com/getsentry/onpremise.git
 cd ./onpremise
-mkdir -p ./data/{sentry,postgres}
+mkdir -p data/{sentry,postgres}
 
 echo '===== building sentry images(1) ====='
 sleep 2
