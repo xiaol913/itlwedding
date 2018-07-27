@@ -7,12 +7,13 @@ echo '===== moving files ====='
 sleep 2
 cp -r ./db ../
 cp -r ./nginx ../
-cp -r ./sentry ../
 cp ./docker-compose.yml ../
 
 echo '===== creating netword ====='
 sleep 2
 docker network create shawnlive
+cd ..
+git clone https://github.com/getsentry/onpremise.git
 cd ../sentry
 mkdir -p ./data/{sentry,postgres}
 
@@ -31,7 +32,7 @@ sleep 2
     set timeout 30
     spawn docker-compose run --rm web upgrade
     expect {
-        "*create a user account now*" { send "y\r"; exp_continue }
+        "Would you like to create a user account now*" { send "y\r"; exp_continue }
         "Email*" { send "admin@admin.com\r"; exp_continue } 
         "Password*" { send "123456\r"; exp_continue }
         "Repeat for confirmation*" { send "123456\r"; exp_continue }
