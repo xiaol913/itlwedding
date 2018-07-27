@@ -28,16 +28,16 @@ sed -i "/SENTRY_SECRET_KEY:/{s/''/'$key'/}" ./docker-compose.yml
 echo '===== building sentry images(2) ====='
 sleep 2
 /bin/expect << -EOF
-  set timeout 30
-  spawn docker-compose run --rm web upgrade
-  expect {
-    "*create a user account now*" { send "y\r"; exp_continue }
-    "Email*" { send "admin@admin.com\r"; exp_continue } 
-    "Password*" { send "123456\r"; exp_continue }
-    "Repeat for confirmation*" { send "123456\r"; exp_continue }
-    "Should this user be a superuser*" { send "y\r" }
-  }
-  expect eof
+    set timeout 30
+    spawn docker-compose run --rm web upgrade
+    expect {
+        "*create a user account now*" { send "y\r"; exp_continue }
+        "Email*" { send "admin@admin.com\r"; exp_continue } 
+        "Password*" { send "123456\r"; exp_continue }
+        "Repeat for confirmation*" { send "123456\r"; exp_continue }
+        "Should this user be a superuser*" { send "y\r" }
+    }
+    expect eof
 -EOF
 
 echo '===== start sentry ====='
