@@ -33,11 +33,11 @@ sleep 2
     set timeout 30
     spawn docker-compose run --rm web upgrade 
     expect {
-        "Would you like to create a user account now*" { send "y\r"; exp_continue }
-        "Email*" { send "admin@admin.com\r"; exp_continue } 
-        "Password*" { send "123456\r"; exp_continue }
-        "Repeat for confirmation*" { send "123456\r"; exp_continue }
-        "Should this user be a superuser*" { send "y\r" }
+        "Would you like to create a user account now*" { send y\r; exp_continue }
+        "Email*" { send "1@1.com\r"; exp_continue } 
+        "Password*" { send 123456\r; exp_continue }
+        "Repeat for confirmation*" { send 123456\r; exp_continue }
+        "Should this user be a superuser*" { send y\r }
     }
     expect eof
 -EOF
@@ -45,32 +45,26 @@ sleep 2
 echo '===== check sentry ====='
 echo 'Did you create a user?("yes/no")'
 read res
-while [ $res == 'yes' ]; do
-    if [ $res == 'yes' ]; then
-        echo 'finish!'
-    elif [ $res == 'no' ]; then
+while [ $res != 'yes' ]; do
+    if [ $res == 'no' ]; then
         echo 'Did upgrade finish?'
         read fin
-        while [ $fin == 'yes' ]; do
-            echo 'please input email:'
-            read email
-            echo 'please input password:'
-            read passwd
+        while [ $fin != 'yes' ]; do
             /bin/expect << -EOF
     set timeout 30
     spawn docker-compose run --rm web upgrade 
     expect {
-        "Would you like to create a user account now*" { send "y\r"; exp_continue }
-        "Email*" { send "$email\r"; exp_continue } 
-        "Password*" { send "$passwd\r"; exp_continue }
-        "Repeat for confirmation*" { send "$passwd\r"; exp_continue }
-        "Should this user be a superuser*" { send "y\r" }
+        "Would you like to create a user account now*" { send y\r; exp_continue }
+        "Email*" { send "1@1.com\r"; exp_continue } 
+        "Password*" { send 123456\r; exp_continue }
+        "Repeat for confirmation*" { send 123456\r; exp_continue }
+        "Should this user be a superuser*" { send y\r }
     }
     expect eof
 -EOF
             echo 'Did upgrade finish?'
             read fin
-            done
+        done
         echo 'please input "from sentry.models import Project'
         echo 'from sentry.receivers.core import create_default_projects'
         echo 'create_default_projects([Project])"'
@@ -78,10 +72,11 @@ while [ $res == 'yes' ]; do
         /bin/expect << -EOF
     spawn docker-compose run --rm web createuser
     expect {
-        "Email*" { send "$email\r"; exp_continue } 
-        "Password*" { send "$passwd\r"; exp_continue }
-        "Repeat for confirmation*" { send "$passwd\r"; exp_continue }
-        "Should this user be a superuser*" { send "y\r" }
+        "Would you like to create a user account now*" { send y\r; exp_continue }
+        "Email*" { send "1@1.com\r"; exp_continue } 
+        "Password*" { send 123456\r; exp_continue }
+        "Repeat for confirmation*" { send 123456\r; exp_continue }
+        "Should this user be a superuser*" { send y\r }
     }
     expect eof
 -EOF
@@ -89,7 +84,7 @@ while [ $res == 'yes' ]; do
     else
         echo 'please input "yes" or "no"!'
     fi
-
+done
 
 echo '===== start sentry ====='
 sleep 2
