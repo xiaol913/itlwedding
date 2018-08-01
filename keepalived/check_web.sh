@@ -4,6 +4,6 @@ if [ $A -eq 0 ];then
     sleep 10
     if [ `ps -ef | grep nginx | grep -v grep | wc -l` -eq 0 ];then
         #killall keepalived
-        ps -ef|grep keepalived|grep -v grep|awk '{print $2}'|xargs kill -9
+	service keepalived stop
     fi
 fi
