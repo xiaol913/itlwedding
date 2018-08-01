@@ -9,7 +9,7 @@ Quick Start
 
 2.    Build sentry images
 
-      cd sentry && docker-compose build
+      cd ../sentry && docker-compose build
 
 4.    Generate a secret key. Add it to docker-compose.yml in base as SENTRY_SECRET_KEY
 
