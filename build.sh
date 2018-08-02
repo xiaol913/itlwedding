@@ -3,7 +3,6 @@
 echo '========== Start to building =========='
 sleep 2
 echo 1 > /proc/sys/net/ipv4/ip_forward
-service network restart
 
 echo '===== moving files ====='
 sleep 2
