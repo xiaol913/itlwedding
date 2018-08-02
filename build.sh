@@ -84,6 +84,7 @@ while [ $res != 'yes' ]; do
         res='yes'
     else
         echo 'please input "yes" or "no"!'
+        read res
     fi
 done
 
