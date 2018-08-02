@@ -2,6 +2,8 @@
 
 echo '========== Start to building =========='
 sleep 2
+echo 1 > /proc/sys/net/ipv4/ip_forward
+service network restart
 
 echo '===== moving files ====='
 sleep 2
@@ -10,7 +12,7 @@ cp -r ./nginx ../
 cp -r ./sentry ../
 cp ./docker-compose.yml ../
 
-echo '===== creating netword ====='
+echo '===== creating network ====='
 sleep 2
 docker network create shawnlive
 cd ../sentry
