@@ -68,6 +68,7 @@ while [ $res != 'yes' ]; do
         echo 'please input "from sentry.models import Project'
         echo 'from sentry.receivers.core import create_default_projects'
         echo 'create_default_projects([Project])"'
+        sleep 5
         docker-compose run --rm web shell
         /bin/expect << -EOF
     spawn docker-compose run --rm web createuser
